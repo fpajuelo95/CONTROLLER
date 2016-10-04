@@ -48,6 +48,35 @@ bool SpecificWorker::setParams(RoboCompCommonBehavior::ParameterList params)
 
 void SpecificWorker::compute()
 {
+const float threshold = 410; //millimeters
+    float rot = 0.6;  //rads per second
+
+    try
+    {
+        RoboCompLaser::TLaserData ldata = laser_proxy->getLaserData();  //read laser data 
+        std::sort( ldata.begin()+10, ldata.end()-10, [](RoboCompLaser::TData a, RoboCompLaser::TData b){ return     a.dist < b.dist; }) ;  //sort laser data from small to large distances using a lambda function.
+
+    if( ldata[10].dist < threshold)
+    {
+	if(ldata[10].angle > 0){
+	  std::cout << ldata.front().dist << std::endl;
+	  differentialrobot_proxy->setSpeedBase(5, -rot);
+	  usleep(rand()%(1500000-100000 + 1) + 100000);  //random wait between 1.5s and 0.1sec
+	}else{
+	  std::cout << ldata.front().dist << std::endl;
+	  differentialrobot_proxy->setSpeedBase(5, rot);
+	  usleep(rand()%(1500000-100000 + 1) + 100000);
+	}
+    }
+    else
+    {
+        differentialrobot_proxy->setSpeedBase(200, 0); 
+    }
+    }
+    catch(const Ice::Exception &ex)
+    {
+        std::cout << ex << std::endl;
+    }	
 // 	try
 // 	{
 // 		camera_proxy->getYImage(0,img, cState, bState);

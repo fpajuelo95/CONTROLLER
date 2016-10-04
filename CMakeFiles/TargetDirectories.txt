@@ -1,0 +1,14 @@
+/home/salabeta/robocomp/components/parastroROB/controller/CMakeFiles/install.dir
+/home/salabeta/robocomp/components/parastroROB/controller/CMakeFiles/list_install_components.dir
+/home/salabeta/robocomp/components/parastroROB/controller/CMakeFiles/install/strip.dir
+/home/salabeta/robocomp/components/parastroROB/controller/CMakeFiles/install/local.dir
+/home/salabeta/robocomp/components/parastroROB/controller/CMakeFiles/rebuild_cache.dir
+/home/salabeta/robocomp/components/parastroROB/controller/CMakeFiles/edit_cache.dir
+/home/salabeta/robocomp/components/parastroROB/controller/src/CMakeFiles/install.dir
+/home/salabeta/robocomp/components/parastroROB/controller/src/CMakeFiles/list_install_components.dir
+/home/salabeta/robocomp/components/parastroROB/controller/src/CMakeFiles/rebuild_cache.dir
+/home/salabeta/robocomp/components/parastroROB/controller/src/CMakeFiles/Controller.dir
+/home/salabeta/robocomp/components/parastroROB/controller/src/CMakeFiles/edit_cache.dir
+/home/salabeta/robocomp/components/parastroROB/controller/src/CMakeFiles/install/strip.dir
+/home/salabeta/robocomp/components/parastroROB/controller/src/CMakeFiles/install/local.dir
+/home/salabeta/robocomp/components/parastroROB/controller/src/CMakeFiles/Controller_automoc.dir
