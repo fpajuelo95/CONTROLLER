@@ -36,37 +36,13 @@
 
 class SpecificWorker : public GenericWorker
 {
-  struct Target
-  {
-    QMutex m;
-    QVec pose;
-    bool active = false;
-    void setActive()
-    {
-      QMutexLocker lm(&m);
-      active = true;
-    }
-    void copy(float x, float z)
-    {
-      QMutexLocker lm(&m);
-      pose[0] = x;
-      pose[1] = z;
-
-    }
-    QVec getPose()
-    {
-      QMutexLocker lm(&m);
-      return pose;
-    }
-  };
-  
 Q_OBJECT
 public:
 	SpecificWorker(MapPrx& mprx);	
 	~SpecificWorker();
 	bool setParams(RoboCompCommonBehavior::ParameterList params);
-	void setPick(const Pick &myPick) ;
 
+	void setPick(const Pick &myPick);
 
 public slots:
 	void compute(); 	

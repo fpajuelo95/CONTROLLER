@@ -78,13 +78,20 @@ src/Laser.cpp: /opt/robocomp/interfaces/Laser.ice
 src/Laser.h: src/Laser.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate src/Laser.h
 
+src/RCISMousePicker.cpp: /opt/robocomp/interfaces/RCISMousePicker.ice
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/salabeta/robocomp/components/parastroROB/controller/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating RCISMousePicker.cpp and RCISMousePicker.h from RCISMousePicker.ice"
+	cd /home/salabeta/robocomp/components/parastroROB/controller/src && slice2cpp -I/home/salabeta/robocomp//interfaces/ -I/opt/robocomp/interfaces -I. /opt/robocomp/interfaces/RCISMousePicker.ice --output-dir .
+
+src/RCISMousePicker.h: src/RCISMousePicker.cpp
+	@$(CMAKE_COMMAND) -E touch_nocreate src/RCISMousePicker.h
+
 src/ui_mainUI.h: src/mainUI.ui
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/salabeta/robocomp/components/parastroROB/controller/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating ui_mainUI.h"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/salabeta/robocomp/components/parastroROB/controller/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating ui_mainUI.h"
 	cd /home/salabeta/robocomp/components/parastroROB/controller/src && /usr/lib/x86_64-linux-gnu/qt4/bin/uic -o /home/salabeta/robocomp/components/parastroROB/controller/src/ui_mainUI.h /home/salabeta/robocomp/components/parastroROB/controller/src/mainUI.ui
 
 src/CMakeFiles/Controller.dir/specificworker.cpp.o: src/CMakeFiles/Controller.dir/flags.make
 src/CMakeFiles/Controller.dir/specificworker.cpp.o: src/specificworker.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/salabeta/robocomp/components/parastroROB/controller/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/CMakeFiles/Controller.dir/specificworker.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/salabeta/robocomp/components/parastroROB/controller/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/CMakeFiles/Controller.dir/specificworker.cpp.o"
 	cd /home/salabeta/robocomp/components/parastroROB/controller/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Controller.dir/specificworker.cpp.o -c /home/salabeta/robocomp/components/parastroROB/controller/src/specificworker.cpp
 
 src/CMakeFiles/Controller.dir/specificworker.cpp.i: cmake_force
@@ -108,7 +115,7 @@ src/CMakeFiles/Controller.dir/specificworker.cpp.o.provides.build: src/CMakeFile
 
 src/CMakeFiles/Controller.dir/specificmonitor.cpp.o: src/CMakeFiles/Controller.dir/flags.make
 src/CMakeFiles/Controller.dir/specificmonitor.cpp.o: src/specificmonitor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/salabeta/robocomp/components/parastroROB/controller/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/CMakeFiles/Controller.dir/specificmonitor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/salabeta/robocomp/components/parastroROB/controller/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/CMakeFiles/Controller.dir/specificmonitor.cpp.o"
 	cd /home/salabeta/robocomp/components/parastroROB/controller/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Controller.dir/specificmonitor.cpp.o -c /home/salabeta/robocomp/components/parastroROB/controller/src/specificmonitor.cpp
 
 src/CMakeFiles/Controller.dir/specificmonitor.cpp.i: cmake_force
@@ -132,7 +139,7 @@ src/CMakeFiles/Controller.dir/specificmonitor.cpp.o.provides.build: src/CMakeFil
 
 src/CMakeFiles/Controller.dir/home/salabeta/robocomp/classes/rapplication/rapplication.cpp.o: src/CMakeFiles/Controller.dir/flags.make
 src/CMakeFiles/Controller.dir/home/salabeta/robocomp/classes/rapplication/rapplication.cpp.o: /home/salabeta/robocomp/classes/rapplication/rapplication.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/salabeta/robocomp/components/parastroROB/controller/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/CMakeFiles/Controller.dir/home/salabeta/robocomp/classes/rapplication/rapplication.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/salabeta/robocomp/components/parastroROB/controller/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/CMakeFiles/Controller.dir/home/salabeta/robocomp/classes/rapplication/rapplication.cpp.o"
 	cd /home/salabeta/robocomp/components/parastroROB/controller/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Controller.dir/home/salabeta/robocomp/classes/rapplication/rapplication.cpp.o -c /home/salabeta/robocomp/classes/rapplication/rapplication.cpp
 
 src/CMakeFiles/Controller.dir/home/salabeta/robocomp/classes/rapplication/rapplication.cpp.i: cmake_force
@@ -156,7 +163,7 @@ src/CMakeFiles/Controller.dir/home/salabeta/robocomp/classes/rapplication/rappli
 
 src/CMakeFiles/Controller.dir/home/salabeta/robocomp/classes/qlog/qlog.cpp.o: src/CMakeFiles/Controller.dir/flags.make
 src/CMakeFiles/Controller.dir/home/salabeta/robocomp/classes/qlog/qlog.cpp.o: /home/salabeta/robocomp/classes/qlog/qlog.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/salabeta/robocomp/components/parastroROB/controller/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/CMakeFiles/Controller.dir/home/salabeta/robocomp/classes/qlog/qlog.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/salabeta/robocomp/components/parastroROB/controller/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object src/CMakeFiles/Controller.dir/home/salabeta/robocomp/classes/qlog/qlog.cpp.o"
 	cd /home/salabeta/robocomp/components/parastroROB/controller/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Controller.dir/home/salabeta/robocomp/classes/qlog/qlog.cpp.o -c /home/salabeta/robocomp/classes/qlog/qlog.cpp
 
 src/CMakeFiles/Controller.dir/home/salabeta/robocomp/classes/qlog/qlog.cpp.i: cmake_force
@@ -180,7 +187,7 @@ src/CMakeFiles/Controller.dir/home/salabeta/robocomp/classes/qlog/qlog.cpp.o.pro
 
 src/CMakeFiles/Controller.dir/main.cpp.o: src/CMakeFiles/Controller.dir/flags.make
 src/CMakeFiles/Controller.dir/main.cpp.o: src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/salabeta/robocomp/components/parastroROB/controller/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object src/CMakeFiles/Controller.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/salabeta/robocomp/components/parastroROB/controller/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object src/CMakeFiles/Controller.dir/main.cpp.o"
 	cd /home/salabeta/robocomp/components/parastroROB/controller/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Controller.dir/main.cpp.o -c /home/salabeta/robocomp/components/parastroROB/controller/src/main.cpp
 
 src/CMakeFiles/Controller.dir/main.cpp.i: cmake_force
@@ -204,7 +211,7 @@ src/CMakeFiles/Controller.dir/main.cpp.o.provides.build: src/CMakeFiles/Controll
 
 src/CMakeFiles/Controller.dir/genericmonitor.cpp.o: src/CMakeFiles/Controller.dir/flags.make
 src/CMakeFiles/Controller.dir/genericmonitor.cpp.o: src/genericmonitor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/salabeta/robocomp/components/parastroROB/controller/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object src/CMakeFiles/Controller.dir/genericmonitor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/salabeta/robocomp/components/parastroROB/controller/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object src/CMakeFiles/Controller.dir/genericmonitor.cpp.o"
 	cd /home/salabeta/robocomp/components/parastroROB/controller/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Controller.dir/genericmonitor.cpp.o -c /home/salabeta/robocomp/components/parastroROB/controller/src/genericmonitor.cpp
 
 src/CMakeFiles/Controller.dir/genericmonitor.cpp.i: cmake_force
@@ -228,7 +235,7 @@ src/CMakeFiles/Controller.dir/genericmonitor.cpp.o.provides.build: src/CMakeFile
 
 src/CMakeFiles/Controller.dir/commonbehaviorI.cpp.o: src/CMakeFiles/Controller.dir/flags.make
 src/CMakeFiles/Controller.dir/commonbehaviorI.cpp.o: src/commonbehaviorI.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/salabeta/robocomp/components/parastroROB/controller/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object src/CMakeFiles/Controller.dir/commonbehaviorI.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/salabeta/robocomp/components/parastroROB/controller/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object src/CMakeFiles/Controller.dir/commonbehaviorI.cpp.o"
 	cd /home/salabeta/robocomp/components/parastroROB/controller/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Controller.dir/commonbehaviorI.cpp.o -c /home/salabeta/robocomp/components/parastroROB/controller/src/commonbehaviorI.cpp
 
 src/CMakeFiles/Controller.dir/commonbehaviorI.cpp.i: cmake_force
@@ -252,7 +259,7 @@ src/CMakeFiles/Controller.dir/commonbehaviorI.cpp.o.provides.build: src/CMakeFil
 
 src/CMakeFiles/Controller.dir/genericworker.cpp.o: src/CMakeFiles/Controller.dir/flags.make
 src/CMakeFiles/Controller.dir/genericworker.cpp.o: src/genericworker.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/salabeta/robocomp/components/parastroROB/controller/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object src/CMakeFiles/Controller.dir/genericworker.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/salabeta/robocomp/components/parastroROB/controller/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object src/CMakeFiles/Controller.dir/genericworker.cpp.o"
 	cd /home/salabeta/robocomp/components/parastroROB/controller/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Controller.dir/genericworker.cpp.o -c /home/salabeta/robocomp/components/parastroROB/controller/src/genericworker.cpp
 
 src/CMakeFiles/Controller.dir/genericworker.cpp.i: cmake_force
@@ -274,9 +281,33 @@ src/CMakeFiles/Controller.dir/genericworker.cpp.o.provides: src/CMakeFiles/Contr
 src/CMakeFiles/Controller.dir/genericworker.cpp.o.provides.build: src/CMakeFiles/Controller.dir/genericworker.cpp.o
 
 
+src/CMakeFiles/Controller.dir/rcismousepickerI.cpp.o: src/CMakeFiles/Controller.dir/flags.make
+src/CMakeFiles/Controller.dir/rcismousepickerI.cpp.o: src/rcismousepickerI.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/salabeta/robocomp/components/parastroROB/controller/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object src/CMakeFiles/Controller.dir/rcismousepickerI.cpp.o"
+	cd /home/salabeta/robocomp/components/parastroROB/controller/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Controller.dir/rcismousepickerI.cpp.o -c /home/salabeta/robocomp/components/parastroROB/controller/src/rcismousepickerI.cpp
+
+src/CMakeFiles/Controller.dir/rcismousepickerI.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Controller.dir/rcismousepickerI.cpp.i"
+	cd /home/salabeta/robocomp/components/parastroROB/controller/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/salabeta/robocomp/components/parastroROB/controller/src/rcismousepickerI.cpp > CMakeFiles/Controller.dir/rcismousepickerI.cpp.i
+
+src/CMakeFiles/Controller.dir/rcismousepickerI.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Controller.dir/rcismousepickerI.cpp.s"
+	cd /home/salabeta/robocomp/components/parastroROB/controller/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/salabeta/robocomp/components/parastroROB/controller/src/rcismousepickerI.cpp -o CMakeFiles/Controller.dir/rcismousepickerI.cpp.s
+
+src/CMakeFiles/Controller.dir/rcismousepickerI.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/Controller.dir/rcismousepickerI.cpp.o.requires
+
+src/CMakeFiles/Controller.dir/rcismousepickerI.cpp.o.provides: src/CMakeFiles/Controller.dir/rcismousepickerI.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/Controller.dir/build.make src/CMakeFiles/Controller.dir/rcismousepickerI.cpp.o.provides.build
+.PHONY : src/CMakeFiles/Controller.dir/rcismousepickerI.cpp.o.provides
+
+src/CMakeFiles/Controller.dir/rcismousepickerI.cpp.o.provides.build: src/CMakeFiles/Controller.dir/rcismousepickerI.cpp.o
+
+
 src/CMakeFiles/Controller.dir/CommonBehavior.cpp.o: src/CMakeFiles/Controller.dir/flags.make
 src/CMakeFiles/Controller.dir/CommonBehavior.cpp.o: src/CommonBehavior.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/salabeta/robocomp/components/parastroROB/controller/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object src/CMakeFiles/Controller.dir/CommonBehavior.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/salabeta/robocomp/components/parastroROB/controller/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object src/CMakeFiles/Controller.dir/CommonBehavior.cpp.o"
 	cd /home/salabeta/robocomp/components/parastroROB/controller/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Controller.dir/CommonBehavior.cpp.o -c /home/salabeta/robocomp/components/parastroROB/controller/src/CommonBehavior.cpp
 
 src/CMakeFiles/Controller.dir/CommonBehavior.cpp.i: cmake_force
@@ -300,7 +331,7 @@ src/CMakeFiles/Controller.dir/CommonBehavior.cpp.o.provides.build: src/CMakeFile
 
 src/CMakeFiles/Controller.dir/DifferentialRobot.cpp.o: src/CMakeFiles/Controller.dir/flags.make
 src/CMakeFiles/Controller.dir/DifferentialRobot.cpp.o: src/DifferentialRobot.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/salabeta/robocomp/components/parastroROB/controller/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object src/CMakeFiles/Controller.dir/DifferentialRobot.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/salabeta/robocomp/components/parastroROB/controller/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object src/CMakeFiles/Controller.dir/DifferentialRobot.cpp.o"
 	cd /home/salabeta/robocomp/components/parastroROB/controller/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Controller.dir/DifferentialRobot.cpp.o -c /home/salabeta/robocomp/components/parastroROB/controller/src/DifferentialRobot.cpp
 
 src/CMakeFiles/Controller.dir/DifferentialRobot.cpp.i: cmake_force
@@ -324,7 +355,7 @@ src/CMakeFiles/Controller.dir/DifferentialRobot.cpp.o.provides.build: src/CMakeF
 
 src/CMakeFiles/Controller.dir/Laser.cpp.o: src/CMakeFiles/Controller.dir/flags.make
 src/CMakeFiles/Controller.dir/Laser.cpp.o: src/Laser.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/salabeta/robocomp/components/parastroROB/controller/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object src/CMakeFiles/Controller.dir/Laser.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/salabeta/robocomp/components/parastroROB/controller/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object src/CMakeFiles/Controller.dir/Laser.cpp.o"
 	cd /home/salabeta/robocomp/components/parastroROB/controller/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Controller.dir/Laser.cpp.o -c /home/salabeta/robocomp/components/parastroROB/controller/src/Laser.cpp
 
 src/CMakeFiles/Controller.dir/Laser.cpp.i: cmake_force
@@ -346,9 +377,33 @@ src/CMakeFiles/Controller.dir/Laser.cpp.o.provides: src/CMakeFiles/Controller.di
 src/CMakeFiles/Controller.dir/Laser.cpp.o.provides.build: src/CMakeFiles/Controller.dir/Laser.cpp.o
 
 
+src/CMakeFiles/Controller.dir/RCISMousePicker.cpp.o: src/CMakeFiles/Controller.dir/flags.make
+src/CMakeFiles/Controller.dir/RCISMousePicker.cpp.o: src/RCISMousePicker.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/salabeta/robocomp/components/parastroROB/controller/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object src/CMakeFiles/Controller.dir/RCISMousePicker.cpp.o"
+	cd /home/salabeta/robocomp/components/parastroROB/controller/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Controller.dir/RCISMousePicker.cpp.o -c /home/salabeta/robocomp/components/parastroROB/controller/src/RCISMousePicker.cpp
+
+src/CMakeFiles/Controller.dir/RCISMousePicker.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Controller.dir/RCISMousePicker.cpp.i"
+	cd /home/salabeta/robocomp/components/parastroROB/controller/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/salabeta/robocomp/components/parastroROB/controller/src/RCISMousePicker.cpp > CMakeFiles/Controller.dir/RCISMousePicker.cpp.i
+
+src/CMakeFiles/Controller.dir/RCISMousePicker.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Controller.dir/RCISMousePicker.cpp.s"
+	cd /home/salabeta/robocomp/components/parastroROB/controller/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/salabeta/robocomp/components/parastroROB/controller/src/RCISMousePicker.cpp -o CMakeFiles/Controller.dir/RCISMousePicker.cpp.s
+
+src/CMakeFiles/Controller.dir/RCISMousePicker.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/Controller.dir/RCISMousePicker.cpp.o.requires
+
+src/CMakeFiles/Controller.dir/RCISMousePicker.cpp.o.provides: src/CMakeFiles/Controller.dir/RCISMousePicker.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/Controller.dir/build.make src/CMakeFiles/Controller.dir/RCISMousePicker.cpp.o.provides.build
+.PHONY : src/CMakeFiles/Controller.dir/RCISMousePicker.cpp.o.provides
+
+src/CMakeFiles/Controller.dir/RCISMousePicker.cpp.o.provides.build: src/CMakeFiles/Controller.dir/RCISMousePicker.cpp.o
+
+
 src/CMakeFiles/Controller.dir/Controller_automoc.cpp.o: src/CMakeFiles/Controller.dir/flags.make
 src/CMakeFiles/Controller.dir/Controller_automoc.cpp.o: src/Controller_automoc.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/salabeta/robocomp/components/parastroROB/controller/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object src/CMakeFiles/Controller.dir/Controller_automoc.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/salabeta/robocomp/components/parastroROB/controller/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object src/CMakeFiles/Controller.dir/Controller_automoc.cpp.o"
 	cd /home/salabeta/robocomp/components/parastroROB/controller/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Controller.dir/Controller_automoc.cpp.o -c /home/salabeta/robocomp/components/parastroROB/controller/src/Controller_automoc.cpp
 
 src/CMakeFiles/Controller.dir/Controller_automoc.cpp.i: cmake_force
@@ -380,9 +435,11 @@ Controller_OBJECTS = \
 "CMakeFiles/Controller.dir/genericmonitor.cpp.o" \
 "CMakeFiles/Controller.dir/commonbehaviorI.cpp.o" \
 "CMakeFiles/Controller.dir/genericworker.cpp.o" \
+"CMakeFiles/Controller.dir/rcismousepickerI.cpp.o" \
 "CMakeFiles/Controller.dir/CommonBehavior.cpp.o" \
 "CMakeFiles/Controller.dir/DifferentialRobot.cpp.o" \
 "CMakeFiles/Controller.dir/Laser.cpp.o" \
+"CMakeFiles/Controller.dir/RCISMousePicker.cpp.o" \
 "CMakeFiles/Controller.dir/Controller_automoc.cpp.o"
 
 # External object files for target Controller
@@ -396,9 +453,11 @@ bin/Controller: src/CMakeFiles/Controller.dir/main.cpp.o
 bin/Controller: src/CMakeFiles/Controller.dir/genericmonitor.cpp.o
 bin/Controller: src/CMakeFiles/Controller.dir/commonbehaviorI.cpp.o
 bin/Controller: src/CMakeFiles/Controller.dir/genericworker.cpp.o
+bin/Controller: src/CMakeFiles/Controller.dir/rcismousepickerI.cpp.o
 bin/Controller: src/CMakeFiles/Controller.dir/CommonBehavior.cpp.o
 bin/Controller: src/CMakeFiles/Controller.dir/DifferentialRobot.cpp.o
 bin/Controller: src/CMakeFiles/Controller.dir/Laser.cpp.o
+bin/Controller: src/CMakeFiles/Controller.dir/RCISMousePicker.cpp.o
 bin/Controller: src/CMakeFiles/Controller.dir/Controller_automoc.cpp.o
 bin/Controller: src/CMakeFiles/Controller.dir/build.make
 bin/Controller: /usr/lib/x86_64-linux-gnu/libQtOpenGL.so
@@ -410,7 +469,7 @@ bin/Controller: /usr/lib/x86_64-linux-gnu/libQtGui.so
 bin/Controller: /usr/lib/x86_64-linux-gnu/libQtXml.so
 bin/Controller: /usr/lib/x86_64-linux-gnu/libQtCore.so
 bin/Controller: src/CMakeFiles/Controller.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/salabeta/robocomp/components/parastroROB/controller/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable ../bin/Controller"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/salabeta/robocomp/components/parastroROB/controller/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Linking CXX executable ../bin/Controller"
 	cd /home/salabeta/robocomp/components/parastroROB/controller/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Controller.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -426,9 +485,11 @@ src/CMakeFiles/Controller.dir/requires: src/CMakeFiles/Controller.dir/main.cpp.o
 src/CMakeFiles/Controller.dir/requires: src/CMakeFiles/Controller.dir/genericmonitor.cpp.o.requires
 src/CMakeFiles/Controller.dir/requires: src/CMakeFiles/Controller.dir/commonbehaviorI.cpp.o.requires
 src/CMakeFiles/Controller.dir/requires: src/CMakeFiles/Controller.dir/genericworker.cpp.o.requires
+src/CMakeFiles/Controller.dir/requires: src/CMakeFiles/Controller.dir/rcismousepickerI.cpp.o.requires
 src/CMakeFiles/Controller.dir/requires: src/CMakeFiles/Controller.dir/CommonBehavior.cpp.o.requires
 src/CMakeFiles/Controller.dir/requires: src/CMakeFiles/Controller.dir/DifferentialRobot.cpp.o.requires
 src/CMakeFiles/Controller.dir/requires: src/CMakeFiles/Controller.dir/Laser.cpp.o.requires
+src/CMakeFiles/Controller.dir/requires: src/CMakeFiles/Controller.dir/RCISMousePicker.cpp.o.requires
 src/CMakeFiles/Controller.dir/requires: src/CMakeFiles/Controller.dir/Controller_automoc.cpp.o.requires
 
 .PHONY : src/CMakeFiles/Controller.dir/requires
@@ -443,6 +504,8 @@ src/CMakeFiles/Controller.dir/depend: src/DifferentialRobot.cpp
 src/CMakeFiles/Controller.dir/depend: src/DifferentialRobot.h
 src/CMakeFiles/Controller.dir/depend: src/Laser.cpp
 src/CMakeFiles/Controller.dir/depend: src/Laser.h
+src/CMakeFiles/Controller.dir/depend: src/RCISMousePicker.cpp
+src/CMakeFiles/Controller.dir/depend: src/RCISMousePicker.h
 src/CMakeFiles/Controller.dir/depend: src/ui_mainUI.h
 	cd /home/salabeta/robocomp/components/parastroROB/controller && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/salabeta/robocomp/components/parastroROB/controller /home/salabeta/robocomp/components/parastroROB/controller/src /home/salabeta/robocomp/components/parastroROB/controller /home/salabeta/robocomp/components/parastroROB/controller/src /home/salabeta/robocomp/components/parastroROB/controller/src/CMakeFiles/Controller.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/CMakeFiles/Controller.dir/depend

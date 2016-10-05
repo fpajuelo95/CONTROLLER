@@ -55,6 +55,8 @@ moc_genericmonitor.cpp
 /home/salabeta/robocomp/components/parastroROB/controller/src/moc_genericmonitor.cpp
 moc_genericworker.cpp
 /home/salabeta/robocomp/components/parastroROB/controller/src/moc_genericworker.cpp
+moc_rcismousepickerI.cpp
+/home/salabeta/robocomp/components/parastroROB/controller/src/moc_rcismousepickerI.cpp
 moc_specificmonitor.cpp
 /home/salabeta/robocomp/components/parastroROB/controller/src/moc_specificmonitor.cpp
 moc_specificworker.cpp
@@ -76,6 +78,20 @@ IceUtil/Iterator.h
 
 /home/salabeta/robocomp/components/parastroROB/controller/src/Laser.cpp
 Laser.h
+-
+Ice/LocalException.h
+-
+Ice/ObjectFactory.h
+-
+Ice/BasicStream.h
+-
+Ice/Object.h
+-
+IceUtil/Iterator.h
+-
+
+/home/salabeta/robocomp/components/parastroROB/controller/src/RCISMousePicker.cpp
+RCISMousePicker.h
 -
 Ice/LocalException.h
 -
@@ -145,6 +161,8 @@ CommonBehavior.h
 -
 Laser.h
 -
+RCISMousePicker.h
+-
 DifferentialRobot.h
 -
 
@@ -177,9 +195,13 @@ specificmonitor.h
 /home/salabeta/robocomp/components/parastroROB/controller/src/specificmonitor.h
 commonbehaviorI.h
 /home/salabeta/robocomp/components/parastroROB/controller/src/commonbehaviorI.h
+rcismousepickerI.h
+-
 DifferentialRobot.h
 -
 Laser.h
+-
+RCISMousePicker.h
 -
 
 /home/salabeta/robocomp/components/parastroROB/controller/src/moc_commonbehaviorI.cpp
@@ -194,6 +216,10 @@ genericmonitor.h
 genericworker.h
 /home/salabeta/robocomp/components/parastroROB/controller/src/genericworker.h
 
+/home/salabeta/robocomp/components/parastroROB/controller/src/moc_rcismousepickerI.cpp
+rcismousepickerI.h
+/home/salabeta/robocomp/components/parastroROB/controller/src/rcismousepickerI.h
+
 /home/salabeta/robocomp/components/parastroROB/controller/src/moc_specificmonitor.cpp
 specificmonitor.h
 /home/salabeta/robocomp/components/parastroROB/controller/src/specificmonitor.h
@@ -201,6 +227,22 @@ specificmonitor.h
 /home/salabeta/robocomp/components/parastroROB/controller/src/moc_specificworker.cpp
 specificworker.h
 /home/salabeta/robocomp/components/parastroROB/controller/src/specificworker.h
+
+/home/salabeta/robocomp/components/parastroROB/controller/src/rcismousepickerI.cpp
+rcismousepickerI.h
+/home/salabeta/robocomp/components/parastroROB/controller/src/rcismousepickerI.h
+
+/home/salabeta/robocomp/components/parastroROB/controller/src/rcismousepickerI.h
+QtCore/QObject
+-
+Ice/Ice.h
+-
+RCISMousePicker.h
+-
+config.h
+-
+genericworker.h
+/home/salabeta/robocomp/components/parastroROB/controller/src/genericworker.h
 
 /home/salabeta/robocomp/components/parastroROB/controller/src/specificmonitor.cpp
 specificmonitor.h
@@ -4288,6 +4330,38 @@ DifferentialRobot.h
 Ice/UndefSysMacros.h
 -
 
+src/RCISMousePicker.h
+Ice/ProxyF.h
+-
+Ice/ObjectF.h
+-
+Ice/Exception.h
+-
+Ice/LocalObject.h
+-
+Ice/StreamHelpers.h
+-
+Ice/Proxy.h
+-
+Ice/Object.h
+-
+Ice/Outgoing.h
+-
+Ice/OutgoingAsync.h
+-
+Ice/Incoming.h
+-
+Ice/Direct.h
+-
+IceUtil/ScopedArray.h
+-
+IceUtil/Optional.h
+-
+Ice/StreamF.h
+-
+Ice/UndefSysMacros.h
+-
+
 src/config.h
 
 src/genericworker.h
@@ -4305,8 +4379,22 @@ CommonBehavior.h
 -
 Laser.h
 -
+RCISMousePicker.h
+-
 DifferentialRobot.h
 -
+
+src/rcismousepickerI.h
+QtCore/QObject
+-
+Ice/Ice.h
+-
+RCISMousePicker.h
+-
+config.h
+-
+genericworker.h
+src/genericworker.h
 
 src/ui_mainUI.h
 QtCore/QVariant
