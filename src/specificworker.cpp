@@ -49,10 +49,65 @@ bool SpecificWorker::setParams(RoboCompCommonBehavior::ParameterList params)
 
 void SpecificWorker::compute()
 {
-const float threshold = 410; //millimeters
+    const float threshold = 410; //millimeters
     float rot = 0.6;  //rads per second
+    float anguloBase, xpick, zpick, xrobot, zrobot;
+    RoboCompDifferentialRobot :: TBaseState bState; 
+    
+    if(t.active)
+    {
+        differentialrobot_proxy-> getBaseState (bState);
+	anguloBase=bState.alpha;
+	xrobot=bState.x;
+	zrobot=bState.z;
+	xpick=t.getPose().getItem(0);
+	zpick=t.getPose().getItem(1);
+	
+	if(!enfocado){
+	  qDebug()<< "AQUI";
+	  float R[2][2];
+	  R[0][0]= cos(anguloBase);
+	  R[0][1]= -sin(anguloBase);
+	  R[1][0]= sin(anguloBase);
+	  R[1][1]= cos(anguloBase);
+	  
+	  float puntos[2];
+	  puntos[0] = R[0][0] * (xpick - xrobot) + R[0][1] * (zpick - zrobot);
+	  puntos[1] = R[1][0] * (xpick - xrobot) + R[1][1] * (zpick - zrobot);
+	  
+	  float angle = atan2(puntos[0], puntos[1]);
+	  qDebug()<< angle << "ANGULO";
+	  
+	  if(abs(angle) <= 0.05){
+	    differentialrobot_proxy->stopBase();
+	    enfocado = true;
+	  }else
+	    if(angle > 0)
+	      differentialrobot_proxy->setSpeedBase(0,rot);
+	    else
+	      differentialrobot_proxy->setSpeedBase(0,-rot);
+	}
+	if(enfocado)
+	{
+	  qDebug()<< "AQUI2";
+	  double x = (xpick - xrobot);
+	  double z = (zpick - zrobot);
+	  double dist = sqrt((x*x) + (z*z));
+	  //qDebug()<< dist ;
+	  differentialrobot_proxy->setSpeedBase(200,0);
+	  if(dist <= threshold/2)
+	  {
+	    qDebug()<< "AQUI3";
+	    t.setActive(false);
+	    enfocado=false;
+	    differentialrobot_proxy->stopBase();
+	  }
+	}
+    }
+      
 
-    try
+
+    /*try
     {
         RoboCompLaser::TLaserData ldata = laser_proxy->getLaserData();  //read laser data 
         std::sort( ldata.begin()+10, ldata.end()-10, [](RoboCompLaser::TData a, RoboCompLaser::TData b){ return     a.dist < b.dist; }) ;  //sort laser data from small to large distances using a lambda function.
@@ -77,7 +132,7 @@ const float threshold = 410; //millimeters
     catch(const Ice::Exception &ex)
     {
         std::cout << ex << std::endl;
-    }	
+    }*/	
 
 }
 
@@ -85,10 +140,13 @@ const float threshold = 410; //millimeters
 
 void SpecificWorker::setPick(const Pick &myPick)
 {
-  
+  qDebug() << "PICK";
+  t.copy(myPick.x, myPick.z);
+  t.setActive(true);
   qDebug() << myPick.x<<myPick.z;
-  
+  enfocado=false;
 }
+
 
 
 

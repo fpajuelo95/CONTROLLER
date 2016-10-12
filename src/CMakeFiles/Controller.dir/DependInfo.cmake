@@ -4,20 +4,20 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/salabeta/robocomp/components/parastroROB/controller/src/CommonBehavior.cpp" "/home/salabeta/robocomp/components/parastroROB/controller/src/CMakeFiles/Controller.dir/CommonBehavior.cpp.o"
-  "/home/salabeta/robocomp/components/parastroROB/controller/src/Controller_automoc.cpp" "/home/salabeta/robocomp/components/parastroROB/controller/src/CMakeFiles/Controller.dir/Controller_automoc.cpp.o"
-  "/home/salabeta/robocomp/components/parastroROB/controller/src/DifferentialRobot.cpp" "/home/salabeta/robocomp/components/parastroROB/controller/src/CMakeFiles/Controller.dir/DifferentialRobot.cpp.o"
-  "/home/salabeta/robocomp/components/parastroROB/controller/src/Laser.cpp" "/home/salabeta/robocomp/components/parastroROB/controller/src/CMakeFiles/Controller.dir/Laser.cpp.o"
-  "/home/salabeta/robocomp/components/parastroROB/controller/src/RCISMousePicker.cpp" "/home/salabeta/robocomp/components/parastroROB/controller/src/CMakeFiles/Controller.dir/RCISMousePicker.cpp.o"
-  "/home/salabeta/robocomp/components/parastroROB/controller/src/commonbehaviorI.cpp" "/home/salabeta/robocomp/components/parastroROB/controller/src/CMakeFiles/Controller.dir/commonbehaviorI.cpp.o"
-  "/home/salabeta/robocomp/components/parastroROB/controller/src/genericmonitor.cpp" "/home/salabeta/robocomp/components/parastroROB/controller/src/CMakeFiles/Controller.dir/genericmonitor.cpp.o"
-  "/home/salabeta/robocomp/components/parastroROB/controller/src/genericworker.cpp" "/home/salabeta/robocomp/components/parastroROB/controller/src/CMakeFiles/Controller.dir/genericworker.cpp.o"
-  "/home/salabeta/robocomp/classes/qlog/qlog.cpp" "/home/salabeta/robocomp/components/parastroROB/controller/src/CMakeFiles/Controller.dir/home/salabeta/robocomp/classes/qlog/qlog.cpp.o"
-  "/home/salabeta/robocomp/classes/rapplication/rapplication.cpp" "/home/salabeta/robocomp/components/parastroROB/controller/src/CMakeFiles/Controller.dir/home/salabeta/robocomp/classes/rapplication/rapplication.cpp.o"
-  "/home/salabeta/robocomp/components/parastroROB/controller/src/main.cpp" "/home/salabeta/robocomp/components/parastroROB/controller/src/CMakeFiles/Controller.dir/main.cpp.o"
-  "/home/salabeta/robocomp/components/parastroROB/controller/src/rcismousepickerI.cpp" "/home/salabeta/robocomp/components/parastroROB/controller/src/CMakeFiles/Controller.dir/rcismousepickerI.cpp.o"
-  "/home/salabeta/robocomp/components/parastroROB/controller/src/specificmonitor.cpp" "/home/salabeta/robocomp/components/parastroROB/controller/src/CMakeFiles/Controller.dir/specificmonitor.cpp.o"
-  "/home/salabeta/robocomp/components/parastroROB/controller/src/specificworker.cpp" "/home/salabeta/robocomp/components/parastroROB/controller/src/CMakeFiles/Controller.dir/specificworker.cpp.o"
+  "/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/CommonBehavior.cpp" "/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/CMakeFiles/Controller.dir/CommonBehavior.cpp.o"
+  "/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/Controller_automoc.cpp" "/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/CMakeFiles/Controller.dir/Controller_automoc.cpp.o"
+  "/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/DifferentialRobot.cpp" "/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/CMakeFiles/Controller.dir/DifferentialRobot.cpp.o"
+  "/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/Laser.cpp" "/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/CMakeFiles/Controller.dir/Laser.cpp.o"
+  "/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/RCISMousePicker.cpp" "/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/CMakeFiles/Controller.dir/RCISMousePicker.cpp.o"
+  "/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/commonbehaviorI.cpp" "/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/CMakeFiles/Controller.dir/commonbehaviorI.cpp.o"
+  "/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/genericmonitor.cpp" "/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/CMakeFiles/Controller.dir/genericmonitor.cpp.o"
+  "/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/genericworker.cpp" "/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/CMakeFiles/Controller.dir/genericworker.cpp.o"
+  "/home/juanlu/robocomp/classes/qlog/qlog.cpp" "/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/CMakeFiles/Controller.dir/home/juanlu/robocomp/classes/qlog/qlog.cpp.o"
+  "/home/juanlu/robocomp/classes/rapplication/rapplication.cpp" "/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/CMakeFiles/Controller.dir/home/juanlu/robocomp/classes/rapplication/rapplication.cpp.o"
+  "/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/main.cpp" "/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/CMakeFiles/Controller.dir/main.cpp.o"
+  "/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/rcismousepickerI.cpp" "/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/CMakeFiles/Controller.dir/rcismousepickerI.cpp.o"
+  "/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/specificmonitor.cpp" "/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/CMakeFiles/Controller.dir/specificmonitor.cpp.o"
+  "/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/specificworker.cpp" "/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/CMakeFiles/Controller.dir/specificworker.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -43,18 +43,18 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/opt/robocomp/include"
   "/classes"
   "."
-  "/home/salabeta/robocomp/classes"
-  "/home/salabeta/robocomp/libs"
-  "/home/salabeta/robocomp/interfaces"
+  "/home/juanlu/robocomp/classes"
+  "/home/juanlu/robocomp/libs"
+  "/home/juanlu/robocomp/interfaces"
   "/include"
   )
 
 # Pairs of files generated by the same build rule.
 set(CMAKE_MULTIPLE_OUTPUT_PAIRS
-  "/home/salabeta/robocomp/components/parastroROB/controller/src/CommonBehavior.h" "/home/salabeta/robocomp/components/parastroROB/controller/src/CommonBehavior.cpp"
-  "/home/salabeta/robocomp/components/parastroROB/controller/src/DifferentialRobot.h" "/home/salabeta/robocomp/components/parastroROB/controller/src/DifferentialRobot.cpp"
-  "/home/salabeta/robocomp/components/parastroROB/controller/src/Laser.h" "/home/salabeta/robocomp/components/parastroROB/controller/src/Laser.cpp"
-  "/home/salabeta/robocomp/components/parastroROB/controller/src/RCISMousePicker.h" "/home/salabeta/robocomp/components/parastroROB/controller/src/RCISMousePicker.cpp"
+  "/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/CommonBehavior.h" "/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/CommonBehavior.cpp"
+  "/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/DifferentialRobot.h" "/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/DifferentialRobot.cpp"
+  "/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/Laser.h" "/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/Laser.cpp"
+  "/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/RCISMousePicker.h" "/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/RCISMousePicker.cpp"
   )
 
 
