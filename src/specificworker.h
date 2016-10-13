@@ -67,7 +67,7 @@ public:
 	~SpecificWorker();
 	bool setParams(RoboCompCommonBehavior::ParameterList params);
 	void setPick(const Pick &myPick);
-	bool enfocado=true;
+	bool girado=true;
 
 
 public slots:

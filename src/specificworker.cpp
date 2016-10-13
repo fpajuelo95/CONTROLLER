@@ -51,58 +51,62 @@ void SpecificWorker::compute()
 {
     const float threshold = 410; //millimeters
     float rot = 0.6;  //rads per second
-    float anguloBase, xpick, zpick, xrobot, zrobot;
+    float anguloBase, xpick, zpick, xrobot, zrobot, anguloTemp, valorAbsAngBase;
+    float R[2][2];
+    float puntos[2];
+    double x, z, dist;
+
     RoboCompDifferentialRobot :: TBaseState bState; 
     
     if(t.active)
     {
-        differentialrobot_proxy-> getBaseState (bState);
-	anguloBase=bState.alpha;
-	xrobot=bState.x;
-	zrobot=bState.z;
-	xpick=t.getPose().getItem(0);
-	zpick=t.getPose().getItem(1);
+        differentialrobot_proxy-> getBaseState (bState); //Obtenemos la posicion y angulo del robot
+	anguloBase=bState.alpha; //Obtenemos angulo del robot
+	xrobot=bState.x; //Obtenemos la posicion x del robot
+	zrobot=bState.z; //Obtenemos la posicion z del robot
+	xpick=t.getPose().getItem(0); //Obtenemos la posicion x donde hemos clickado
+	zpick=t.getPose().getItem(1); //Obtenemos la posicion z donde hemos clickado
 	
-	if(!enfocado){
-	  qDebug()<< "AQUI";
-	  float R[2][2];
+	if(!girado){
+	  //Calculamos la matriz necesaria para rotar al robot con el anguloBase
 	  R[0][0]= cos(anguloBase);
 	  R[0][1]= -sin(anguloBase);
 	  R[1][0]= sin(anguloBase);
 	  R[1][1]= cos(anguloBase);
 	  
-	  float puntos[2];
 	  puntos[0] = R[0][0] * (xpick - xrobot) + R[0][1] * (zpick - zrobot);
 	  puntos[1] = R[1][0] * (xpick - xrobot) + R[1][1] * (zpick - zrobot);
 	  
-	  float angle = atan2(puntos[0], puntos[1]);
-	  qDebug()<< angle << "ANGULO";
+	  anguloTemp = atan2(puntos[0], puntos[1]);
 	  
-	  if(abs(angle) <= 0.05){
-	    differentialrobot_proxy->stopBase();
-	    enfocado = true;
-	  }else
-	    if(angle > 0)
-	      differentialrobot_proxy->setSpeedBase(0,rot);
-	    else
-	      differentialrobot_proxy->setSpeedBase(0,-rot);
-	}
-	if(enfocado)
-	{
-	  qDebug()<< "AQUI2";
-	  double x = (xpick - xrobot);
-	  double z = (zpick - zrobot);
-	  double dist = sqrt((x*x) + (z*z));
-	  //qDebug()<< dist ;
-	  differentialrobot_proxy->setSpeedBase(200,0);
-	  if(dist <= threshold/2)
+	  valorAbsAngBase = abs(anguloTemp); //Calculamos el valor absoluto del nuevo angulo
+	  
+	  if(valorAbsAngBase <= 0.05) 
 	  {
-	    qDebug()<< "AQUI3";
-	    t.setActive(false);
-	    enfocado=false;
-	    differentialrobot_proxy->stopBase();
+	    differentialrobot_proxy->stopBase(); 
+	    girado = true;
 	  }
+	  else
+	    if(anguloTemp < 0)
+	      differentialrobot_proxy->setSpeedBase(0,-rot); 
+	    else
+	      differentialrobot_proxy->setSpeedBase(0,rot); 
 	}
+	else
+	  if(girado)
+	  {
+	    x = (xpick - xrobot);
+	    z = (zpick - zrobot);
+	    dist = sqrt((x*x) + (z*z));
+	    differentialrobot_proxy->setSpeedBase(200,0); 
+	    if(dist <= threshold/4) //Para cuando se cumple la condición (Ha llegado)
+	    {
+	      qDebug()<< "AQUI3";
+	      t.setActive(false);
+	      girado=false;
+	      differentialrobot_proxy->stopBase();
+	    }
+	  }
     }
       
 
@@ -140,11 +144,9 @@ void SpecificWorker::compute()
 
 void SpecificWorker::setPick(const Pick &myPick)
 {
-  qDebug() << "PICK";
   t.copy(myPick.x, myPick.z);
   t.setActive(true);
-  qDebug() << myPick.x<<myPick.z;
-  enfocado=false;
+  girado=false;
 }
 
 
