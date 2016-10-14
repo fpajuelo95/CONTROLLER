@@ -49,11 +49,9 @@ bool SpecificWorker::setParams(RoboCompCommonBehavior::ParameterList params)
 
 void SpecificWorker::compute()
 {
-    const float threshold = 410; //millimeters
-    float rot = 0.6;  //rads per second
-    float anguloBase, xpick, zpick, xrobot, zrobot, anguloTemp, valorAbsAngBase;
-    float R[2][2];
-    float puntos[2];
+    const float threshold = 100; //millimeters
+    const float limiteRot = 0.005;
+    float rot, xpick, zpick, xrobot, zrobot, rotTemp, valorAbsrot, puntoUno, puntoDos;
     double x, z, dist;
 
     RoboCompDifferentialRobot :: TBaseState bState; 
@@ -61,37 +59,31 @@ void SpecificWorker::compute()
     if(t.active)
     {
         differentialrobot_proxy-> getBaseState (bState); //Obtenemos la posicion y angulo del robot
-	anguloBase=bState.alpha; //Obtenemos angulo del robot
+	rot=bState.alpha; //Obtenemos angulo del robot
 	xrobot=bState.x; //Obtenemos la posicion x del robot
 	zrobot=bState.z; //Obtenemos la posicion z del robot
 	xpick=t.getPose().getItem(0); //Obtenemos la posicion x donde hemos clickado
 	zpick=t.getPose().getItem(1); //Obtenemos la posicion z donde hemos clickado
 	
 	if(!girado){
-	  //Calculamos la matriz necesaria para rotar al robot con el anguloBase
-	  R[0][0]= cos(anguloBase);
-	  R[0][1]= -sin(anguloBase);
-	  R[1][0]= sin(anguloBase);
-	  R[1][1]= cos(anguloBase);
 	  
-	  puntos[0] = R[0][0] * (xpick - xrobot) + R[0][1] * (zpick - zrobot);
-	  puntos[1] = R[1][0] * (xpick - xrobot) + R[1][1] * (zpick - zrobot);
 	  
-	  anguloTemp = atan2(puntos[0], puntos[1]);
+	  puntoUno = cos(rot) * (xpick - xrobot) + (-sin(rot) * (zpick - zrobot));
+	  puntoDos = sin(rot) * (xpick - xrobot) + cos(rot) * (zpick - zrobot);
 	  
-	  valorAbsAngBase = abs(anguloTemp); //Calculamos el valor absoluto del nuevo angulo
+	  rotTemp = atan2(puntoUno, puntoDos);
 	  
-	  if(valorAbsAngBase <= 0.05) 
+	  valorAbsrot = abs(rotTemp); //Calculamos el valor absoluto del nuevo angulo
+	  
+	  qDebug() << "ANGULO " << rotTemp;
+	  if(valorAbsrot <= limiteRot) 
 	  {
 	    differentialrobot_proxy->stopBase(); 
 	    girado = true;
 	  }
 	  else
-	    if(anguloTemp < 0)
-	      differentialrobot_proxy->setSpeedBase(0,-rot); 
-	    else
-	      differentialrobot_proxy->setSpeedBase(0,rot); 
-	}
+	      differentialrobot_proxy->setSpeedBase(0, rotTemp); 
+ 	}
 	else
 	  if(girado)
 	  {
@@ -99,9 +91,8 @@ void SpecificWorker::compute()
 	    z = (zpick - zrobot);
 	    dist = sqrt((x*x) + (z*z));
 	    differentialrobot_proxy->setSpeedBase(200,0); 
-	    if(dist <= threshold/4) //Para cuando se cumple la condición (Ha llegado)
+	    if(dist <= threshold)
 	    {
-	      qDebug()<< "AQUI3";
 	      t.setActive(false);
 	      girado=false;
 	      differentialrobot_proxy->stopBase();
