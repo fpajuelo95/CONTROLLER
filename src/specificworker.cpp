@@ -50,7 +50,7 @@ bool SpecificWorker::setParams(RoboCompCommonBehavior::ParameterList params)
 void SpecificWorker::compute()
 {
     const float threshold = 100; //millimeters
-    const float limiteRot = 0.005;
+    const float limiteRot = 0.005; //limite rotacion
     float rot, xpick, zpick, xrobot, zrobot, rotTemp, valorAbsrot, puntoUno, puntoDos;
     double x, z, dist;
 
@@ -75,7 +75,6 @@ void SpecificWorker::compute()
 	  
 	  valorAbsrot = abs(rotTemp); //Calculamos el valor absoluto del nuevo angulo
 	  
-	  qDebug() << "ANGULO " << rotTemp;
 	  if(valorAbsrot <= limiteRot) 
 	  {
 	    differentialrobot_proxy->stopBase(); 
