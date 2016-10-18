@@ -89,7 +89,7 @@ void SpecificWorker::compute()
 	    x = (xpick - xrobot);
 	    z = (zpick - zrobot);
 	    dist = sqrt((x*x) + (z*z));
-	    differentialrobot_proxy->setSpeedBase(200,0); 
+	    differentialrobot_proxy->setSpeedBase(dist,0); 
 	    if(dist <= threshold)
 	    {
 	      t.setActive(false);
@@ -98,10 +98,19 @@ void SpecificWorker::compute()
 	    }
 	  }
     }
-      
+
+}
 
 
-    /*try
+   
+
+////////////////////////////////////////////////////////////
+
+void SpecificWorker::esquivar(){
+  float rot=0.6;
+  const float threshold = 100;
+
+   try
     {
         RoboCompLaser::TLaserData ldata = laser_proxy->getLaserData();  //read laser data 
         std::sort( ldata.begin()+10, ldata.end()-10, [](RoboCompLaser::TData a, RoboCompLaser::TData b){ return     a.dist < b.dist; }) ;  //sort laser data from small to large distances using a lambda function.
@@ -126,11 +135,12 @@ void SpecificWorker::compute()
     catch(const Ice::Exception &ex)
     {
         std::cout << ex << std::endl;
-    }*/	
+    }	
 
 }
-
-////////////////////////////////////////////////////////////
+  
+  
+  
 
 void SpecificWorker::setPick(const Pick &myPick)
 {

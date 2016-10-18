@@ -71,7 +71,8 @@ public:
 
 
 public slots:
-	void compute(); 	
+	void compute(); 
+	void esquivar();
 
 private:
 	
