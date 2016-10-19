@@ -73,9 +73,12 @@ public:
 public slots:
 	void compute(); 
 	void esquivar();
+	void goToTarget();
 
 private:
-	
+  InnerModel * innerModel;
+  enum class State {INIT, GOTO, BUG, END};
+  State st;
 };
 
 #endif

@@ -23,6 +23,7 @@
 */
 SpecificWorker::SpecificWorker(MapPrx& mprx) : GenericWorker(mprx)
 {
+  st=State::INIT;
 
 }
 
@@ -38,7 +39,18 @@ bool SpecificWorker::setParams(RoboCompCommonBehavior::ParameterList params)
 {
 
 
-
+    innerModel=new InnerModel("ruta simpleworld.xml");
+    //utilizar metodo transform(robot,xoz,world)
+    
+    //QPoligon poly;
+    //getLaserData
+    //for(auto e ,laserdata)
+    //qvec=innerModel.transform()
+    //qpointf p(vx(),vz();
+    //poly<<p;
+    
+    //r=(1-landa)p+ landa*q
+    //p-q/200=n n=numero de saltos de p a q
 	
 	timer.start(Period);
 	
@@ -49,62 +61,99 @@ bool SpecificWorker::setParams(RoboCompCommonBehavior::ParameterList params)
 
 void SpecificWorker::compute()
 {
-    const float threshold = 100; //millimeters
-    const float limiteRot = 0.005; //limite rotacion
-    float rot, xpick, zpick, xrobot, zrobot, rotTemp, valorAbsrot, puntoUno, puntoDos;
-    double x, z, dist;
-
-    RoboCompDifferentialRobot :: TBaseState bState; 
+//     const float threshold = 100; //millimeters
+//     const float limiteRot = 0.005; //limite rotacion
+//     float rot, xpick, zpick, xrobot, zrobot, rotTemp, valorAbsrot, puntoUno, puntoDos;
+//     double x, z, dist;
+// 
+//     RoboCompDifferentialRobot :: TBaseState bState;
     
-    if(t.active)
+    
+    switch(st)
     {
-        differentialrobot_proxy-> getBaseState (bState); //Obtenemos la posicion y angulo del robot
-	rot=bState.alpha; //Obtenemos angulo del robot
-	xrobot=bState.x; //Obtenemos la posicion x del robot
-	zrobot=bState.z; //Obtenemos la posicion z del robot
-	xpick=t.getPose().getItem(0); //Obtenemos la posicion x donde hemos clickado
-	zpick=t.getPose().getItem(1); //Obtenemos la posicion z donde hemos clickado
+      case State::INIT:
+	  qDebug()<< "INIT";
+	  st=State::GOTO;
 	
-	if(!girado){
-	  
-	  
-	  puntoUno = cos(rot) * (xpick - xrobot) + (-sin(rot) * (zpick - zrobot));
-	  puntoDos = sin(rot) * (xpick - xrobot) + cos(rot) * (zpick - zrobot);
-	  
-	  rotTemp = atan2(puntoUno, puntoDos);
-	  
-	  valorAbsrot = abs(rotTemp); //Calculamos el valor absoluto del nuevo angulo
-	  
-	  if(valorAbsrot <= limiteRot) 
-	  {
-	    differentialrobot_proxy->stopBase(); 
-	    girado = true;
-	  }
-	  else
-	      differentialrobot_proxy->setSpeedBase(0, rotTemp); 
- 	}
-	else
-	  if(girado)
-	  {
-	    x = (xpick - xrobot);
-	    z = (zpick - zrobot);
-	    dist = sqrt((x*x) + (z*z));
-	    differentialrobot_proxy->setSpeedBase(dist,0); 
-	    if(dist <= threshold)
-	    {
-	      t.setActive(false);
-	      girado=false;
-	      differentialrobot_proxy->stopBase();
-	    }
-	  }
+	break;
+	
+       case State::GOTO:
+	 goToTarget();
+	
+	break;
+	 case State::BUG:
+	   
+	
+	break;
+	 case State::END:
+	
+	break;
+      
+      
+      
+      
     }
-
 }
+    
 
+void SpecificWorker::goToTarget()
+{
+  qDebug()<< "GOTO";
+  st=State::BUG;
 
-   
+//          const float threshold = 100; //millimeters
+//     const float limiteRot = 0.005; //limite rotacion
+//     float rot, xpick, zpick, xrobot, zrobot, rotTemp, valorAbsrot, puntoUno, puntoDos;
+//     double x, z, dist;
+// 
+//     RoboCompDifferentialRobot :: TBaseState bState;
+//     
+//     if(t.active)
+//     {
+//         differentialrobot_proxy-> getBaseState (bState); //Obtenemos la posicion y angulo del robot
+// 	rot=bState.alpha; //Obtenemos angulo del robot
+// 	xrobot=bState.x; //Obtenemos la posicion x del robot
+// 	zrobot=bState.z; //Obtenemos la posicion z del robot
+// 	xpick=t.getPose().getItem(0); //Obtenemos la posicion x donde hemos clickado
+// 	zpick=t.getPose().getItem(1); //Obtenemos la posicion z donde hemos clickado
+// 	
+// 	if(!girado){
+// 	  
+// 	  
+// 	  puntoUno = cos(rot) * (xpick - xrobot) + (-sin(rot) * (zpick - zrobot));
+// 	  puntoDos = sin(rot) * (xpick - xrobot) + cos(rot) * (zpick - zrobot);
+// 	  
+// 	  rotTemp = atan2(puntoUno, puntoDos);
+// 	  
+// 	  valorAbsrot = abs(rotTemp); //Calculamos el valor absoluto del nuevo angulo
+// 	  
+// 	  if(valorAbsrot <= limiteRot) 
+// 	  {
+// 	    differentialrobot_proxy->stopBase(); 
+// 	    girado = true;
+// 	  }
+// 	  else
+// 	      differentialrobot_proxy->setSpeedBase(0, rotTemp); 
+//  	}
+// 	else
+// 	  if(girado)
+// 	  {
+// 	    x = (xpick - xrobot);
+// 	    z = (zpick - zrobot);
+// 	    dist = sqrt((x*x) + (z*z));
+// 	    differentialrobot_proxy->setSpeedBase(dist,0); 
+// 	    if(dist <= threshold)
+// 	    {
+// 	      t.setActive(false);
+// 	      girado=false;
+// 	      differentialrobot_proxy->stopBase();
+// 	    }
+// 	  }
+//     }
 
-////////////////////////////////////////////////////////////
+} 
+  
+  
 
 void SpecificWorker::esquivar(){
   float rot=0.6;
