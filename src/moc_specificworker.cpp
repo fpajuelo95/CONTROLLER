@@ -32,14 +32,14 @@ static const uint qt_meta_data_SpecificWorker[] = {
  // slots: signature, parameters, type, tag, flags
       16,   15,   15,   15, 0x0a,
       26,   15,   15,   15, 0x0a,
-      37,   15,   15,   15, 0x0a,
+      43,   37,   15,   15, 0x0a,
 
        0        // eod
 };
 
 static const char qt_meta_stringdata_SpecificWorker[] = {
     "SpecificWorker\0\0compute()\0esquivar()\0"
-    "goToTarget()\0"
+    "lData\0goToTarget(RoboCompLaser::TLaserData)\0"
 };
 
 void SpecificWorker::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -50,11 +50,10 @@ void SpecificWorker::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
         switch (_id) {
         case 0: _t->compute(); break;
         case 1: _t->esquivar(); break;
-        case 2: _t->goToTarget(); break;
+        case 2: _t->goToTarget((*reinterpret_cast< const RoboCompLaser::TLaserData(*)>(_a[1]))); break;
         default: ;
         }
     }
-    Q_UNUSED(_a);
 }
 
 const QMetaObjectExtraData SpecificWorker::staticMetaObjectExtraData = {

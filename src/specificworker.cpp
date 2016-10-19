@@ -39,7 +39,7 @@ bool SpecificWorker::setParams(RoboCompCommonBehavior::ParameterList params)
 {
 
 
-    innerModel=new InnerModel("ruta simpleworld.xml");
+    innerModel=new InnerModel("/home/robocomp/robocomp/files/innermodel/simpleworld.xml");
     //utilizar metodo transform(robot,xoz,world)
     
     //QPoligon poly;
@@ -66,90 +66,68 @@ void SpecificWorker::compute()
 //     float rot, xpick, zpick, xrobot, zrobot, rotTemp, valorAbsrot, puntoUno, puntoDos;
 //     double x, z, dist;
 // 
-//     RoboCompDifferentialRobot :: TBaseState bState;
-    
-    
-    switch(st)
-    {
-      case State::INIT:
-	  qDebug()<< "INIT";
+  
+  RoboCompDifferentialRobot::TBaseState bState;
+  RoboCompLaser::TLaserData lData;
+     
+  try
+  {
+    differentialrobot_proxy->getBaseState(bState);
+    lData =laser_proxy->getLaserData();
+    innerModel->updateTransformValues("base", bState.x, 0, bState.z, 0, bState.alpha, 0);
+  }
+  catch(const Ice::Exception &e)
+  { std::cout << e << std::endl;};
+  
+  
+   switch(st)
+   {
+    case State::INIT:
+	qDebug()<< "INIT";
+	if(t.active)
 	  st=State::GOTO;
-	
-	break;
-	
-       case State::GOTO:
-	 goToTarget();
-	
-	break;
-	 case State::BUG:
-	   
-	
-	break;
-	 case State::END:
-	
-	break;
       
+      break;
       
+      case State::GOTO:
+	goToTarget();
       
+      break;
+	case State::BUG:
+	  
+      
+      break;
+	case State::END:
+      
+      break;  
       
     }
 }
     
 
-void SpecificWorker::goToTarget()
+void SpecificWorker::goToTarget(const RoboCompLaser::TLaserData &lData)
 {
   qDebug()<< "GOTO";
-  st=State::BUG;
-
-//          const float threshold = 100; //millimeters
-//     const float limiteRot = 0.005; //limite rotacion
-//     float rot, xpick, zpick, xrobot, zrobot, rotTemp, valorAbsrot, puntoUno, puntoDos;
-//     double x, z, dist;
-// 
-//     RoboCompDifferentialRobot :: TBaseState bState;
-//     
-//     if(t.active)
-//     {
-//         differentialrobot_proxy-> getBaseState (bState); //Obtenemos la posicion y angulo del robot
-// 	rot=bState.alpha; //Obtenemos angulo del robot
-// 	xrobot=bState.x; //Obtenemos la posicion x del robot
-// 	zrobot=bState.z; //Obtenemos la posicion z del robot
-// 	xpick=t.getPose().getItem(0); //Obtenemos la posicion x donde hemos clickado
-// 	zpick=t.getPose().getItem(1); //Obtenemos la posicion z donde hemos clickado
-// 	
-// 	if(!girado){
-// 	  
-// 	  
-// 	  puntoUno = cos(rot) * (xpick - xrobot) + (-sin(rot) * (zpick - zrobot));
-// 	  puntoDos = sin(rot) * (xpick - xrobot) + cos(rot) * (zpick - zrobot);
-// 	  
-// 	  rotTemp = atan2(puntoUno, puntoDos);
-// 	  
-// 	  valorAbsrot = abs(rotTemp); //Calculamos el valor absoluto del nuevo angulo
-// 	  
-// 	  if(valorAbsrot <= limiteRot) 
-// 	  {
-// 	    differentialrobot_proxy->stopBase(); 
-// 	    girado = true;
-// 	  }
-// 	  else
-// 	      differentialrobot_proxy->setSpeedBase(0, rotTemp); 
-//  	}
-// 	else
-// 	  if(girado)
-// 	  {
-// 	    x = (xpick - xrobot);
-// 	    z = (zpick - zrobot);
-// 	    dist = sqrt((x*x) + (z*z));
-// 	    differentialrobot_proxy->setSpeedBase(dist,0); 
-// 	    if(dist <= threshold)
-// 	    {
-// 	      t.setActive(false);
-// 	      girado=false;
-// 	      differentialrobot_proxy->stopBase();
-// 	    }
-// 	  }
-//     }
+  
+  // preguntar si obstaculo
+  
+  QVec tr = innerModel->transform("base", t.pose(), "world");
+  
+  float dist = tr.norm2();
+  if( dist < 100)
+  {
+    st= State::INIT;
+    t.setActive(false);
+    differentialrobot_proxy->stopBase();
+  }
+   	  
+  float rotTemp = atan2(tr.x(), tr.z());
+ 
+  float adv = dist;
+  if( fabs(rotTemp) > 0.05) 
+    adv = 0;
+  
+   differentialrobot_proxy->setSpeedBase(adv, rotTemp); 
 
 } 
   

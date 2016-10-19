@@ -50,8 +50,10 @@ class SpecificWorker : public GenericWorker
     void copy(float x, float z)
     {
       QMutexLocker lm(&m);
+      pose.resize(3);
       pose[0] = x;
-      pose[1] = z;
+      pose[1] = 0;
+      pose[2] = z;
 
     }
     QVec getPose()
@@ -73,12 +75,14 @@ public:
 public slots:
 	void compute(); 
 	void esquivar();
-	void goToTarget();
+	void goToTarget(const RoboCompLaser::TLaserData& lData);
 
 private:
   InnerModel * innerModel;
   enum class State {INIT, GOTO, BUG, END};
   State st;
+
+ 
 };
 
 #endif
