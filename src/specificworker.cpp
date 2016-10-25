@@ -90,7 +90,7 @@ void SpecificWorker::compute()
       break;
       
       case State::GOTO:
-	goToTarget();
+	goToTarget(lData);
       
       break;
 	case State::BUG:
@@ -104,14 +104,41 @@ void SpecificWorker::compute()
     }
 }
     
+void SpecificWorker::bug()
+{
+
+}
+
+bool SpecificWorker::obstacle()
+{
+
+}
+bool SpecificWorker::targetAtsight()
+{
+  QPolygon polygon;
+  for(auto l,laser_proxy)
+  {
+    QVec Ir=innerModel->laserTo("world","laser",l.dist,l.angle);
+    polygon<<QPointF(tr.x(),tr.z());
+  }
+
+  QVec te=t.getPose();
+  return polygon.contains(QPointF(t.x,t.z);
+}
 
 void SpecificWorker::goToTarget(const RoboCompLaser::TLaserData &lData)
 {
+  
+  if(obstacle==true)
+  {
+    st=State::BUG;
+    return;
+  }
   qDebug()<< "GOTO";
   
   // preguntar si obstaculo
   
-  QVec tr = innerModel->transform("base", t.pose(), "world");
+  QVec tr = innerModel->transform("base", t.getPose(), "world");
   
   float dist = tr.norm2();
   if( dist < 100)
@@ -175,6 +202,7 @@ void SpecificWorker::setPick(const Pick &myPick)
   t.setActive(true);
   girado=false;
 }
+
 
 
 
