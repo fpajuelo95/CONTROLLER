@@ -94,7 +94,7 @@ void SpecificWorker::compute()
       
       break;
 	case State::BUG:
-	  
+	  bug(lData);
       
       break;
 	case State::END:
@@ -104,35 +104,79 @@ void SpecificWorker::compute()
     }
 }
     
-void SpecificWorker::bug()
+void SpecificWorker::bug(const RoboCompLaser::TLaserData &lData)
 {
+  float vr;
+  float max_adv = 350.;
+  
+//   if cruzarLinea
+//   {
+//   st=State::GOTO;
+//   return;
+//   }
+//  
+  
+  const float m = 1.f/1000.f;
+  const float n = -0.5;
+  
+  float d = lData[10].dist;
+  if(d>160)
+    vr = m * d + n;
+  if(d<130)
+    vr = m * d + n;
 
+  float const alfa = log( 0.1) / log( 0.2);
+  float vadv = exp(-fabs(vr)*alfa) * max_adv;
+  
+  try{
+  differentialrobot_proxy->setSpeedBase(vadv,vr);
+  }
+   catch(const Ice::Exception &e)
+  { std::cout << e << std::endl;};
 }
+
 
 bool SpecificWorker::obstacle()
 {
+  const float threshold = 100;
 
-}
-bool SpecificWorker::targetAtsight()
-{
-  QPolygon polygon;
-  for(auto l,laser_proxy)
-  {
-    QVec Ir=innerModel->laserTo("world","laser",l.dist,l.angle);
-    polygon<<QPointF(tr.x(),tr.z());
-  }
+   try
+    {
+        RoboCompLaser::TLaserData ldata = laser_proxy->getLaserData();  //read laser data 
+        std::sort( ldata.begin()+10, ldata.end()-10, [](RoboCompLaser::TData a, RoboCompLaser::TData b){ return     a.dist < b.dist; }) ;  //sort laser data from small to large distances using a lambda function.
 
-  QVec te=t.getPose();
-  return polygon.contains(QPointF(t.x,t.z);
+    if( ldata[10].dist < threshold)
+	return true;
+
+    }
+    catch(const Ice::Exception &ex)
+    {
+        std::cout << ex << std::endl;
+    }	
+    return false;
+  
 }
+
+// bool SpecificWorker::targetAtsight(const RoboCompLaser::TLaserData &lData)
+// {
+//   QPolygon polygon;
+//    for(auto l, lData)
+//    {
+//     QVec lr=innerModel->laserTo("world","laser",lData.dist,lData.angle);
+//     polygon<< QPointF(lr.x(),lr.z());
+//   }
+// 
+//   QVec te=t.getPose();
+//   return polygon.contains(QPointF(t.x, t.z);
+//   
+// }
 
 void SpecificWorker::goToTarget(const RoboCompLaser::TLaserData &lData)
 {
   
-  if(obstacle==true)
+  if(obstacle()==true)
   {
     st=State::BUG;
-    return;
   }
   qDebug()<< "GOTO";
   
@@ -160,38 +204,38 @@ void SpecificWorker::goToTarget(const RoboCompLaser::TLaserData &lData)
   
   
 
-void SpecificWorker::esquivar(){
-  float rot=0.6;
-  const float threshold = 100;
-
-   try
-    {
-        RoboCompLaser::TLaserData ldata = laser_proxy->getLaserData();  //read laser data 
-        std::sort( ldata.begin()+10, ldata.end()-10, [](RoboCompLaser::TData a, RoboCompLaser::TData b){ return     a.dist < b.dist; }) ;  //sort laser data from small to large distances using a lambda function.
-
-    if( ldata[10].dist < threshold)
-    {
-	if(ldata[10].angle > 0){
-	  std::cout << ldata.front().dist << std::endl;
-	  differentialrobot_proxy->setSpeedBase(5, -rot);
-	  usleep(rand()%(1500000-100000 + 1) + 100000);  //random wait between 1.5s and 0.1sec
-	}else{
-	  std::cout << ldata.front().dist << std::endl;
-	  differentialrobot_proxy->setSpeedBase(5, rot);
-	  usleep(rand()%(1500000-100000 + 1) + 100000);
-	}
-    }
-    else
-    {
-        differentialrobot_proxy->setSpeedBase(200, 0); 
-    }
-    }
-    catch(const Ice::Exception &ex)
-    {
-        std::cout << ex << std::endl;
-    }	
-
-}
+// void SpecificWorker::esquivar(){
+//   float rot=0.6;
+//   const float threshold = 100;
+// 
+//    try
+//     {
+//         RoboCompLaser::TLaserData ldata = laser_proxy->getLaserData();  //read laser data 
+//         std::sort( ldata.begin()+10, ldata.end()-10, [](RoboCompLaser::TData a, RoboCompLaser::TData b){ return     a.dist < b.dist; }) ;  //sort laser data from small to large distances using a lambda function.
+// 
+//     if( ldata[10].dist < threshold)
+//     {
+// 	if(ldata[10].angle > 0){
+// 	  std::cout << ldata.front().dist << std::endl;
+// 	  differentialrobot_proxy->setSpeedBase(5, -rot);
+// 	  usleep(rand()%(1500000-100000 + 1) + 100000);  //random wait between 1.5s and 0.1sec
+// 	}else{
+// 	  std::cout << ldata.front().dist << std::endl;
+// 	  differentialrobot_proxy->setSpeedBase(5, rot);
+// 	  usleep(rand()%(1500000-100000 + 1) + 100000);
+// 	}
+//     }
+//     else
+//     {
+//         differentialrobot_proxy->setSpeedBase(200, 0); 
+//     }
+//     }
+//     catch(const Ice::Exception &ex)
+//     {
+//         std::cout << ex << std::endl;
+//     }	
+// 
+// }
   
   
   

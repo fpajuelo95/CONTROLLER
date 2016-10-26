@@ -74,19 +74,17 @@ public:
 
 public slots:
 	void compute(); 
-	void esquivar();
+// 	void esquivar();
 	void goToTarget(const RoboCompLaser::TLaserData& lData);
-	void bug();
+	void bug(const RoboCompLaser::TLaserData &lData);
 	bool obstacle();
-	bool targetAtsight();
+// 	bool targetAtsight(const RoboCompLaser::TLaserData &lData);
 	
 
 private:
   InnerModel * innerModel;
   enum class State {INIT, GOTO, BUG, END};
   State st;
- 
-
  
 };
 
