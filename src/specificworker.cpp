@@ -90,6 +90,7 @@ void SpecificWorker::compute()
       break;
       
       case State::GOTO:
+	qDebug()<< "GOTO";
 	goToTarget(lData);
       
       break;
@@ -97,14 +98,27 @@ void SpecificWorker::compute()
 	  bug(lData);
       
       break;
-	case State::END:
+	case State::INIT_BUG:
+	  initBug(lData);
       
       break;  
       
     }
 }
+
+void SpecificWorker::initBug(RoboCompLaser::TLaserData& lData)
+{
+   if(!obstacle(lData))
+   {
+     st=State::BUG;
+   }
     
-void SpecificWorker::bug(const RoboCompLaser::TLaserData &lData)
+  differentialrobot_proxy->stopBase();
+  differentialrobot_proxy->setSpeedBase(0,0.5);
+
+}
+    
+void SpecificWorker::bug(RoboCompLaser::TLaserData &lData)
 {
   float vr;
   float max_adv = 350.;
@@ -115,39 +129,41 @@ void SpecificWorker::bug(const RoboCompLaser::TLaserData &lData)
 //   return;
 //   }
 //  
-  
+  //   if(!obstacle(lData))
+//   {
+//     st=State::GOTO;
+//   }
   const float m = 1.f/1000.f;
   const float n = -0.5;
   
   float d = lData[10].dist;
-  if(d>160)
-    vr = m * d + n;
-  if(d<130)
+  if(d>160 || d<130)
     vr = m * d + n;
 
   float const alfa = log( 0.1) / log( 0.2);
   float vadv = exp(-fabs(vr)*alfa) * max_adv;
   
   try{
-  differentialrobot_proxy->setSpeedBase(vadv,vr);
+  differentialrobot_proxy->setSpeedBase(vadv/3,vr/3);
   }
    catch(const Ice::Exception &e)
-  { std::cout << e << std::endl;};
+  { std::cout << e << std::endl;}
+  
 }
 
 
-bool SpecificWorker::obstacle()
+bool SpecificWorker::obstacle(RoboCompLaser::TLaserData &lData)
 {
-  const float threshold = 100;
+  const float threshold = 400;
 
    try
     {
-        RoboCompLaser::TLaserData ldata = laser_proxy->getLaserData();  //read laser data 
-        std::sort( ldata.begin()+10, ldata.end()-10, [](RoboCompLaser::TData a, RoboCompLaser::TData b){ return     a.dist < b.dist; }) ;  //sort laser data from small to large distances using a lambda function.
+       // RoboCompLaser::TLaserData ldata = laser_proxy->getLaserData();  //read laser data 
+        std::sort( lData.begin()+10, lData.end()-10, [](RoboCompLaser::TData a, RoboCompLaser::TData b){ return     a.dist < b.dist; }) ;  //sort laser data from small to large distances using a lambda function.
 
-    if( ldata[10].dist < threshold)
+    if( lData[10].dist < threshold){
 	return true;
-
+    }
     }
     catch(const Ice::Exception &ex)
     {
@@ -171,13 +187,14 @@ bool SpecificWorker::obstacle()
 //   
 // }
 
-void SpecificWorker::goToTarget(const RoboCompLaser::TLaserData &lData)
+void SpecificWorker::goToTarget(RoboCompLaser::TLaserData &lData)
 {
   
-  if(obstacle()==true)
+  if(obstacle(lData)==true)
   {
-    st=State::BUG;
-  }
+    differentialrobot_proxy->stopBase();
+    st=State::INIT_BUG;
+  }else{
   qDebug()<< "GOTO";
   
   // preguntar si obstaculo
@@ -185,12 +202,6 @@ void SpecificWorker::goToTarget(const RoboCompLaser::TLaserData &lData)
   QVec tr = innerModel->transform("base", t.getPose(), "world");
   
   float dist = tr.norm2();
-  if( dist < 100)
-  {
-    st= State::INIT;
-    t.setActive(false);
-    differentialrobot_proxy->stopBase();
-  }
    	  
   float rotTemp = atan2(tr.x(), tr.z());
  
@@ -199,6 +210,13 @@ void SpecificWorker::goToTarget(const RoboCompLaser::TLaserData &lData)
     adv = 0;
   
    differentialrobot_proxy->setSpeedBase(adv, rotTemp); 
+  if(dist < 100)
+  {
+    st= State::INIT;
+    t.setActive(false);
+    differentialrobot_proxy->stopBase();
+  }
+  }
 
 } 
   
@@ -242,6 +260,7 @@ void SpecificWorker::goToTarget(const RoboCompLaser::TLaserData &lData)
 
 void SpecificWorker::setPick(const Pick &myPick)
 {
+  qDebug()<< "PICK";
   t.copy(myPick.x, myPick.z);
   t.setActive(true);
   girado=false;
