@@ -10,7 +10,7 @@ The output was:
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
 
-The C compiler identification is GNU, found in "/home/juanlu/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/3.5.1/CompilerIdC/a.out"
+The C compiler identification is GNU, found in "/home/salabeta/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/3.5.1/CompilerIdC/a.out"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler: /usr/bin/c++ 
@@ -23,36 +23,33 @@ The output was:
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
 
-The CXX compiler identification is GNU, found in "/home/juanlu/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/3.5.1/CompilerIdCXX/a.out"
+The CXX compiler identification is GNU, found in "/home/salabeta/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/3.5.1/CompilerIdCXX/a.out"
 
 Determining if the C compiler works passed with the following output:
-Change Dir: /home/juanlu/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp
+Change Dir: /home/salabeta/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_cd270/fast"
-make[1]: se entra en el directorio '/home/juanlu/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_cd270.dir/build.make CMakeFiles/cmTC_cd270.dir/build
-make[2]: se entra en el directorio '/home/juanlu/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_cd270.dir/testCCompiler.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_cd270.dir/testCCompiler.c.o   -c /home/juanlu/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_cd270
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cd270.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_cd270.dir/testCCompiler.c.o  -o cmTC_cd270 -rdynamic 
-make[2]: se sale del directorio '/home/juanlu/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp'
-make[1]: se sale del directorio '/home/juanlu/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_7a599/fast"
+/usr/bin/make -f CMakeFiles/cmTC_7a599.dir/build.make CMakeFiles/cmTC_7a599.dir/build
+make[1]: se entra en el directorio '/home/salabeta/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7a599.dir/testCCompiler.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_7a599.dir/testCCompiler.c.o   -c /home/salabeta/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_7a599
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7a599.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_7a599.dir/testCCompiler.c.o  -o cmTC_7a599 -rdynamic 
+make[1]: se sale del directorio '/home/salabeta/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp'
 
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: /home/juanlu/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp
+Change Dir: /home/salabeta/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_331aa/fast"
-make[1]: se entra en el directorio '/home/juanlu/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_331aa.dir/build.make CMakeFiles/cmTC_331aa.dir/build
-make[2]: se entra en el directorio '/home/juanlu/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_331aa.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_331aa.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_331aa
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_331aa.dir/link.txt --verbose=1
-/usr/bin/cc      -v CMakeFiles/cmTC_331aa.dir/CMakeCCompilerABI.c.o  -o cmTC_331aa -rdynamic  
+Run Build Command:"/usr/bin/make" "cmTC_87970/fast"
+/usr/bin/make -f CMakeFiles/cmTC_87970.dir/build.make CMakeFiles/cmTC_87970.dir/build
+make[1]: se entra en el directorio '/home/salabeta/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_87970.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_87970.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_87970
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_87970.dir/link.txt --verbose=1
+/usr/bin/cc      -v CMakeFiles/cmTC_87970.dir/CMakeCCompilerABI.c.o  -o cmTC_87970 -rdynamic  
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper
@@ -62,25 +59,23 @@ Thread model: posix
 gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.2) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_331aa' '-rdynamic' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccrzCk5L.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_331aa /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_331aa.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
-make[2]: se sale del directorio '/home/juanlu/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp'
-make[1]: se sale del directorio '/home/juanlu/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_87970' '-rdynamic' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/cc40hjbs.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_87970 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_87970.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
+make[1]: se sale del directorio '/home/salabeta/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp'
 
 
 Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/juanlu/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /home/salabeta/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_331aa/fast"]
-  ignore line: [make[1]: se entra en el directorio '/home/juanlu/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp']
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_331aa.dir/build.make CMakeFiles/cmTC_331aa.dir/build]
-  ignore line: [make[2]: se entra en el directorio '/home/juanlu/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_331aa.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc     -o CMakeFiles/cmTC_331aa.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_331aa]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_331aa.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc      -v CMakeFiles/cmTC_331aa.dir/CMakeCCompilerABI.c.o  -o cmTC_331aa -rdynamic  ]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_87970/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_87970.dir/build.make CMakeFiles/cmTC_87970.dir/build]
+  ignore line: [make[1]: se entra en el directorio '/home/salabeta/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_87970.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc     -o CMakeFiles/cmTC_87970.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_87970]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_87970.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc      -v CMakeFiles/cmTC_87970.dir/CMakeCCompilerABI.c.o  -o cmTC_87970 -rdynamic  ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper]
@@ -90,13 +85,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.2) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_331aa' '-rdynamic' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccrzCk5L.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_331aa /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_331aa.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_87970' '-rdynamic' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/cc40hjbs.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_87970 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_87970.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccrzCk5L.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cc40hjbs.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -114,7 +109,7 @@ Parsed C implicit link information from above output:
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_331aa] ==> ignore
+    arg [cmTC_87970] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o] ==> ignore
@@ -126,7 +121,7 @@ Parsed C implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../..]
-    arg [CMakeFiles/cmTC_331aa.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_87970.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--as-needed] ==> ignore
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -158,19 +153,17 @@ Parsed C implicit link information from above output:
 
 
 Detecting C [-std=c11] compiler features compiled with the following output:
-Change Dir: /home/juanlu/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp
+Change Dir: /home/salabeta/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_45a9a/fast"
-make[1]: se entra en el directorio '/home/juanlu/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_45a9a.dir/build.make CMakeFiles/cmTC_45a9a.dir/build
-make[2]: se entra en el directorio '/home/juanlu/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_45a9a.dir/feature_tests.c.o
-/usr/bin/cc    -std=c11 -o CMakeFiles/cmTC_45a9a.dir/feature_tests.c.o   -c /home/juanlu/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/feature_tests.c
-Linking C executable cmTC_45a9a
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_45a9a.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_45a9a.dir/feature_tests.c.o  -o cmTC_45a9a -rdynamic 
-make[2]: se sale del directorio '/home/juanlu/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp'
-make[1]: se sale del directorio '/home/juanlu/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_ccc76/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ccc76.dir/build.make CMakeFiles/cmTC_ccc76.dir/build
+make[1]: se entra en el directorio '/home/salabeta/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ccc76.dir/feature_tests.c.o
+/usr/bin/cc    -std=c11 -o CMakeFiles/cmTC_ccc76.dir/feature_tests.c.o   -c /home/salabeta/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/feature_tests.c
+Linking C executable cmTC_ccc76
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ccc76.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_ccc76.dir/feature_tests.c.o  -o cmTC_ccc76 -rdynamic 
+make[1]: se sale del directorio '/home/salabeta/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -180,19 +173,17 @@ make[1]: se sale del directorio '/home/juanlu/robocomp/components/parastroROB/CO
 
 
 Detecting C [-std=c99] compiler features compiled with the following output:
-Change Dir: /home/juanlu/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp
+Change Dir: /home/salabeta/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_b767f/fast"
-make[1]: se entra en el directorio '/home/juanlu/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_b767f.dir/build.make CMakeFiles/cmTC_b767f.dir/build
-make[2]: se entra en el directorio '/home/juanlu/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_b767f.dir/feature_tests.c.o
-/usr/bin/cc    -std=c99 -o CMakeFiles/cmTC_b767f.dir/feature_tests.c.o   -c /home/juanlu/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/feature_tests.c
-Linking C executable cmTC_b767f
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b767f.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_b767f.dir/feature_tests.c.o  -o cmTC_b767f -rdynamic 
-make[2]: se sale del directorio '/home/juanlu/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp'
-make[1]: se sale del directorio '/home/juanlu/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_7e5b5/fast"
+/usr/bin/make -f CMakeFiles/cmTC_7e5b5.dir/build.make CMakeFiles/cmTC_7e5b5.dir/build
+make[1]: se entra en el directorio '/home/salabeta/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7e5b5.dir/feature_tests.c.o
+/usr/bin/cc    -std=c99 -o CMakeFiles/cmTC_7e5b5.dir/feature_tests.c.o   -c /home/salabeta/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/feature_tests.c
+Linking C executable cmTC_7e5b5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7e5b5.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_7e5b5.dir/feature_tests.c.o  -o cmTC_7e5b5 -rdynamic 
+make[1]: se sale del directorio '/home/salabeta/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -202,19 +193,17 @@ make[1]: se sale del directorio '/home/juanlu/robocomp/components/parastroROB/CO
 
 
 Detecting C [-std=c90] compiler features compiled with the following output:
-Change Dir: /home/juanlu/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp
+Change Dir: /home/salabeta/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_2094a/fast"
-make[1]: se entra en el directorio '/home/juanlu/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_2094a.dir/build.make CMakeFiles/cmTC_2094a.dir/build
-make[2]: se entra en el directorio '/home/juanlu/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_2094a.dir/feature_tests.c.o
-/usr/bin/cc    -std=c90 -o CMakeFiles/cmTC_2094a.dir/feature_tests.c.o   -c /home/juanlu/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/feature_tests.c
-Linking C executable cmTC_2094a
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2094a.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_2094a.dir/feature_tests.c.o  -o cmTC_2094a -rdynamic 
-make[2]: se sale del directorio '/home/juanlu/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp'
-make[1]: se sale del directorio '/home/juanlu/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_fcc3f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_fcc3f.dir/build.make CMakeFiles/cmTC_fcc3f.dir/build
+make[1]: se entra en el directorio '/home/salabeta/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_fcc3f.dir/feature_tests.c.o
+/usr/bin/cc    -std=c90 -o CMakeFiles/cmTC_fcc3f.dir/feature_tests.c.o   -c /home/salabeta/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/feature_tests.c
+Linking C executable cmTC_fcc3f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fcc3f.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_fcc3f.dir/feature_tests.c.o  -o cmTC_fcc3f -rdynamic 
+make[1]: se sale del directorio '/home/salabeta/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -222,33 +211,30 @@ make[1]: se sale del directorio '/home/juanlu/robocomp/components/parastroROB/CO
     Feature record: C_FEATURE:0c_static_assert
     Feature record: C_FEATURE:0c_variadic_macros
 Determining if the CXX compiler works passed with the following output:
-Change Dir: /home/juanlu/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp
+Change Dir: /home/salabeta/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_0220a/fast"
-make[1]: se entra en el directorio '/home/juanlu/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_0220a.dir/build.make CMakeFiles/cmTC_0220a.dir/build
-make[2]: se entra en el directorio '/home/juanlu/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_0220a.dir/testCXXCompiler.cxx.o
-/usr/bin/c++      -o CMakeFiles/cmTC_0220a.dir/testCXXCompiler.cxx.o -c /home/juanlu/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_0220a
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0220a.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTC_0220a.dir/testCXXCompiler.cxx.o  -o cmTC_0220a -rdynamic 
-make[2]: se sale del directorio '/home/juanlu/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp'
-make[1]: se sale del directorio '/home/juanlu/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_12c26/fast"
+/usr/bin/make -f CMakeFiles/cmTC_12c26.dir/build.make CMakeFiles/cmTC_12c26.dir/build
+make[1]: se entra en el directorio '/home/salabeta/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_12c26.dir/testCXXCompiler.cxx.o
+/usr/bin/c++      -o CMakeFiles/cmTC_12c26.dir/testCXXCompiler.cxx.o -c /home/salabeta/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_12c26
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_12c26.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_12c26.dir/testCXXCompiler.cxx.o  -o cmTC_12c26 -rdynamic 
+make[1]: se sale del directorio '/home/salabeta/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp'
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: /home/juanlu/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp
+Change Dir: /home/salabeta/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_04dbf/fast"
-make[1]: se entra en el directorio '/home/juanlu/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_04dbf.dir/build.make CMakeFiles/cmTC_04dbf.dir/build
-make[2]: se entra en el directorio '/home/juanlu/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_04dbf.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/c++      -o CMakeFiles/cmTC_04dbf.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_04dbf
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_04dbf.dir/link.txt --verbose=1
-/usr/bin/c++       -v CMakeFiles/cmTC_04dbf.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_04dbf -rdynamic  
+Run Build Command:"/usr/bin/make" "cmTC_218e9/fast"
+/usr/bin/make -f CMakeFiles/cmTC_218e9.dir/build.make CMakeFiles/cmTC_218e9.dir/build
+make[1]: se entra en el directorio '/home/salabeta/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_218e9.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++      -o CMakeFiles/cmTC_218e9.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_218e9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_218e9.dir/link.txt --verbose=1
+/usr/bin/c++       -v CMakeFiles/cmTC_218e9.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_218e9 -rdynamic  
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper
@@ -258,25 +244,23 @@ Thread model: posix
 gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.2) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_04dbf' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccz69977.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_04dbf /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_04dbf.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
-make[2]: se sale del directorio '/home/juanlu/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp'
-make[1]: se sale del directorio '/home/juanlu/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_218e9' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccAUl84V.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_218e9 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_218e9.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
+make[1]: se sale del directorio '/home/salabeta/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp'
 
 
 Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/juanlu/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /home/salabeta/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_04dbf/fast"]
-  ignore line: [make[1]: se entra en el directorio '/home/juanlu/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp']
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_04dbf.dir/build.make CMakeFiles/cmTC_04dbf.dir/build]
-  ignore line: [make[2]: se entra en el directorio '/home/juanlu/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_04dbf.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/c++      -o CMakeFiles/cmTC_04dbf.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTC_04dbf]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_04dbf.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/c++       -v CMakeFiles/cmTC_04dbf.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_04dbf -rdynamic  ]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_218e9/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_218e9.dir/build.make CMakeFiles/cmTC_218e9.dir/build]
+  ignore line: [make[1]: se entra en el directorio '/home/salabeta/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_218e9.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++      -o CMakeFiles/cmTC_218e9.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_218e9]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_218e9.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++       -v CMakeFiles/cmTC_218e9.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_218e9 -rdynamic  ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper]
@@ -286,13 +270,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.2) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_04dbf' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccz69977.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_04dbf /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_04dbf.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_218e9' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccAUl84V.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_218e9 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_218e9.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccz69977.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccAUl84V.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -310,7 +294,7 @@ Parsed CXX implicit link information from above output:
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_04dbf] ==> ignore
+    arg [cmTC_218e9] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o] ==> ignore
@@ -322,7 +306,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../..]
-    arg [CMakeFiles/cmTC_04dbf.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_218e9.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -352,19 +336,17 @@ Parsed CXX implicit link information from above output:
 
 
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
-Change Dir: /home/juanlu/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp
+Change Dir: /home/salabeta/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_66b25/fast"
-make[1]: se entra en el directorio '/home/juanlu/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_66b25.dir/build.make CMakeFiles/cmTC_66b25.dir/build
-make[2]: se entra en el directorio '/home/juanlu/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_66b25.dir/feature_tests.cxx.o
-/usr/bin/c++     -std=c++14 -o CMakeFiles/cmTC_66b25.dir/feature_tests.cxx.o -c /home/juanlu/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_66b25
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_66b25.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTC_66b25.dir/feature_tests.cxx.o  -o cmTC_66b25 -rdynamic 
-make[2]: se sale del directorio '/home/juanlu/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp'
-make[1]: se sale del directorio '/home/juanlu/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_43e30/fast"
+/usr/bin/make -f CMakeFiles/cmTC_43e30.dir/build.make CMakeFiles/cmTC_43e30.dir/build
+make[1]: se entra en el directorio '/home/salabeta/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_43e30.dir/feature_tests.cxx.o
+/usr/bin/c++     -std=c++14 -o CMakeFiles/cmTC_43e30.dir/feature_tests.cxx.o -c /home/salabeta/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_43e30
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_43e30.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_43e30.dir/feature_tests.cxx.o  -o cmTC_43e30 -rdynamic 
+make[1]: se sale del directorio '/home/salabeta/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -427,19 +409,17 @@ make[1]: se sale del directorio '/home/juanlu/robocomp/components/parastroROB/CO
 
 
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
-Change Dir: /home/juanlu/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp
+Change Dir: /home/salabeta/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_6d086/fast"
-make[1]: se entra en el directorio '/home/juanlu/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_6d086.dir/build.make CMakeFiles/cmTC_6d086.dir/build
-make[2]: se entra en el directorio '/home/juanlu/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_6d086.dir/feature_tests.cxx.o
-/usr/bin/c++     -std=c++11 -o CMakeFiles/cmTC_6d086.dir/feature_tests.cxx.o -c /home/juanlu/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_6d086
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6d086.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTC_6d086.dir/feature_tests.cxx.o  -o cmTC_6d086 -rdynamic 
-make[2]: se sale del directorio '/home/juanlu/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp'
-make[1]: se sale del directorio '/home/juanlu/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_1444f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_1444f.dir/build.make CMakeFiles/cmTC_1444f.dir/build
+make[1]: se entra en el directorio '/home/salabeta/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_1444f.dir/feature_tests.cxx.o
+/usr/bin/c++     -std=c++11 -o CMakeFiles/cmTC_1444f.dir/feature_tests.cxx.o -c /home/salabeta/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_1444f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1444f.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_1444f.dir/feature_tests.cxx.o  -o cmTC_1444f -rdynamic 
+make[1]: se sale del directorio '/home/salabeta/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -502,19 +482,17 @@ make[1]: se sale del directorio '/home/juanlu/robocomp/components/parastroROB/CO
 
 
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
-Change Dir: /home/juanlu/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp
+Change Dir: /home/salabeta/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_44068/fast"
-make[1]: se entra en el directorio '/home/juanlu/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_44068.dir/build.make CMakeFiles/cmTC_44068.dir/build
-make[2]: se entra en el directorio '/home/juanlu/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_44068.dir/feature_tests.cxx.o
-/usr/bin/c++     -std=c++98 -o CMakeFiles/cmTC_44068.dir/feature_tests.cxx.o -c /home/juanlu/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_44068
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_44068.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTC_44068.dir/feature_tests.cxx.o  -o cmTC_44068 -rdynamic 
-make[2]: se sale del directorio '/home/juanlu/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp'
-make[1]: se sale del directorio '/home/juanlu/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_34b66/fast"
+/usr/bin/make -f CMakeFiles/cmTC_34b66.dir/build.make CMakeFiles/cmTC_34b66.dir/build
+make[1]: se entra en el directorio '/home/salabeta/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_34b66.dir/feature_tests.cxx.o
+/usr/bin/c++     -std=c++98 -o CMakeFiles/cmTC_34b66.dir/feature_tests.cxx.o -c /home/salabeta/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_34b66
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_34b66.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_34b66.dir/feature_tests.cxx.o  -o cmTC_34b66 -rdynamic 
+make[1]: se sale del directorio '/home/salabeta/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -574,3 +552,31 @@ make[1]: se sale del directorio '/home/juanlu/robocomp/components/parastroROB/CO
     Feature record: CXX_FEATURE:0cxx_variable_templates
     Feature record: CXX_FEATURE:0cxx_variadic_macros
     Feature record: CXX_FEATURE:0cxx_variadic_templates
+Determining if the Q_WS_X11 exist passed with the following output:
+Change Dir: /home/salabeta/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_7eaf4/fast"
+/usr/bin/make -f CMakeFiles/cmTC_7eaf4.dir/build.make CMakeFiles/cmTC_7eaf4.dir/build
+make[1]: se entra en el directorio '/home/salabeta/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_7eaf4.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++    -I/usr/include/qt4   -o CMakeFiles/cmTC_7eaf4.dir/CheckSymbolExists.cxx.o -c /home/salabeta/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+Linking CXX executable cmTC_7eaf4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7eaf4.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_7eaf4.dir/CheckSymbolExists.cxx.o  -o cmTC_7eaf4 -rdynamic 
+make[1]: se sale del directorio '/home/salabeta/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp'
+
+File /home/salabeta/robocomp/components/parastroROB/CONTROLLER/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_X11
+  return ((int*)(&Q_WS_X11))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+

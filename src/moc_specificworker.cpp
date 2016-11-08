@@ -22,7 +22,7 @@ static const uint qt_meta_data_SpecificWorker[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-       8,   14, // methods
+       1,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -31,25 +31,12 @@ static const uint qt_meta_data_SpecificWorker[] = {
 
  // slots: signature, parameters, type, tag, flags
       16,   15,   15,   15, 0x0a,
-      32,   26,   15,   15, 0x0a,
-      55,   26,   15,   15, 0x0a,
-      84,   71,   15,   15, 0x0a,
-     120,   26,  115,   15, 0x0a,
-     141,   26,  115,   15, 0x0a,
-     180,  173,  167,   15, 0x0a,
-     212,  205,  167,   15, 0x0a,
 
        0        // eod
 };
 
 static const char qt_meta_stringdata_SpecificWorker[] = {
-    "SpecificWorker\0\0compute()\0lData\0"
-    "goToTarget(TLaserData)\0bug(TLaserData)\0"
-    "lData,bState\0initBug(TLaserData,TBaseState)\0"
-    "bool\0obstacle(TLaserData)\0"
-    "targetAtsight(TLaserData)\0float\0tlaser\0"
-    "obstacleLeft(TLaserData)\0bState\0"
-    "distanceToLine(TBaseState)\0"
+    "SpecificWorker\0\0compute()\0"
 };
 
 void SpecificWorker::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -59,20 +46,10 @@ void SpecificWorker::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
         SpecificWorker *_t = static_cast<SpecificWorker *>(_o);
         switch (_id) {
         case 0: _t->compute(); break;
-        case 1: _t->goToTarget((*reinterpret_cast< const TLaserData(*)>(_a[1]))); break;
-        case 2: _t->bug((*reinterpret_cast< const TLaserData(*)>(_a[1]))); break;
-        case 3: _t->initBug((*reinterpret_cast< const TLaserData(*)>(_a[1])),(*reinterpret_cast< const TBaseState(*)>(_a[2]))); break;
-        case 4: { bool _r = _t->obstacle((*reinterpret_cast< TLaserData(*)>(_a[1])));
-            if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = _r; }  break;
-        case 5: { bool _r = _t->targetAtsight((*reinterpret_cast< TLaserData(*)>(_a[1])));
-            if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = _r; }  break;
-        case 6: { float _r = _t->obstacleLeft((*reinterpret_cast< const TLaserData(*)>(_a[1])));
-            if (_a[0]) *reinterpret_cast< float*>(_a[0]) = _r; }  break;
-        case 7: { float _r = _t->distanceToLine((*reinterpret_cast< const TBaseState(*)>(_a[1])));
-            if (_a[0]) *reinterpret_cast< float*>(_a[0]) = _r; }  break;
         default: ;
         }
     }
+    Q_UNUSED(_a);
 }
 
 const QMetaObjectExtraData SpecificWorker::staticMetaObjectExtraData = {
@@ -107,9 +84,9 @@ int SpecificWorker::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 8)
+        if (_id < 1)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 8;
+        _id -= 1;
     }
     return _id;
 }

@@ -112,10 +112,10 @@ void SpecificWorker::initBug(const TLaserData& lData,const TBaseState& bState)
   catch ( const Ice::Exception &ex ) {  std::cout << ex << std::endl; }
 }
     
-void SpecificWorker::bug(const TLaserData &lData,const TBaseState &bState)
+void SpecificWorker::bug(const TLaserData &lData, const TBaseState& bState)
 {
-  float vr;
-  float max_adv = 350.;
+//   float vr;
+//   float max_adv = 350.;
   float const alfa = log( 0.1) / log( 0.2);
   float dist = obstacleLeft(lData);
   float diffToline = distanceToLine(bState);
@@ -159,13 +159,13 @@ void SpecificWorker::bug(const TLaserData &lData,const TBaseState &bState)
 
 bool SpecificWorker::obstacle(TLaserData lData)
 {
-    const int threshold = 350;
-    std::sort ( lData.begin() + 30, lData.end()- 30, [] ( RoboCompLaser::TData a, RoboCompLaser::TData b ){	return a.dist < b.dist;});
-    return ( lData[30].dist < threshold );
+    const int threshold = 280;
+    std::sort ( lData.begin() + 35, lData.end()- 35, [] ( RoboCompLaser::TData a, RoboCompLaser::TData b ){	return a.dist < b.dist;});
+    return ( lData[35].dist < threshold );
   
 }
 
-bool SpecificWorker::targetAtsight(const RoboCompLaser::TLaserData &lData)
+bool SpecificWorker::targetAtsight(const RoboCompLaser::TLaserData lData)
 {
   QPolygon poly;
 	for ( auto l: lData )
@@ -176,7 +176,7 @@ bool SpecificWorker::targetAtsight(const RoboCompLaser::TLaserData &lData)
 	}
 	QVec targetInRobot = innerModel->transform("base", t.getPose(), "world");
 	float dist = targetInRobot.norm2();
-	int veces = int(dist / 200);  //number of times the robot semilength fits in the robot-to-target distance
+	int veces = int(dist / 80);  //number of times the robot semilength fits in the robot-to-target distance
 	float landa = 1./veces;
 	
 	QList<QPoint> points;
@@ -189,10 +189,10 @@ bool SpecificWorker::targetAtsight(const RoboCompLaser::TLaserData &lData)
 		QVec pointW = innerModel->transform("world", point ,"base");
 		points << QPoint(pointW.x(), pointW.z());
 		
-		pointW = innerModel->transform("world", point - QVec::vec3(200,0,0), "base");
+		pointW = innerModel->transform("world", point - QVec::vec3(220,0,0), "base");
 		points << QPoint(pointW.x(), pointW.z());
 		
-		pointW = innerModel->transform("world", point + QVec::vec3(200,0,0), "base");
+		pointW = innerModel->transform("world", point + QVec::vec3(220,0,0), "base");
 		points << QPoint(pointW.x(), pointW.z());
 		
 	}
@@ -270,6 +270,7 @@ void SpecificWorker::setPick(const Pick &myPick)
   qDebug()<< "PICK";
   t.copy(myPick.x, myPick.z);
   t.setActive(true);
+  st = State::INIT;
 //   girado=false;
 }
 

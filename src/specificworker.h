@@ -83,7 +83,7 @@ private:
   QLine2D linea;
   float distanciaAnterior;
   void goToTarget(const TLaserData& lData);
-  void bug(const TLaserData& lData);
+  void bug(const TLaserData& lData, const TBaseState& bState);
   void initBug(const TLaserData& lData, const TBaseState& bState);
   bool obstacle(TLaserData lData);
   bool targetAtsight(TLaserData lData);
