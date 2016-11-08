@@ -35,7 +35,21 @@
 #include <innermodel/innermodel.h>
 
 class SpecificWorker : public GenericWorker
-{
+{  
+Q_OBJECT
+public:
+	SpecificWorker(MapPrx& mprx);	
+	~SpecificWorker();
+	bool setParams(RoboCompCommonBehavior::ParameterList params);
+	void setPick(const Pick &myPick);
+// 	bool girado=true;
+
+
+public slots:
+	void compute(); 
+
+private:
+  enum class State {INIT, GOTO, BUG, INIT_BUG, END};
   struct Target
   {
     QMutex m;
@@ -61,32 +75,20 @@ class SpecificWorker : public GenericWorker
       QMutexLocker lm(&m);
       return pose;
     }
-  }t;
+  };
   
-Q_OBJECT
-public:
-	SpecificWorker(MapPrx& mprx);	
-	~SpecificWorker();
-	bool setParams(RoboCompCommonBehavior::ParameterList params);
-	void setPick(const Pick &myPick);
-	bool girado=true;
-
-
-public slots:
-	void compute(); 
-// 	void esquivar();
-	void goToTarget(RoboCompLaser::TLaserData& lData);
-	void bug(RoboCompLaser::TLaserData &lData);
-	void initBug(RoboCompLaser::TLaserData &lData);
-	bool obstacle( RoboCompLaser::TLaserData &lData);
-// 	bool targetAtsight(const RoboCompLaser::TLaserData &lData);
-	
-
-private:
-  InnerModel * innerModel;
-  enum class State {INIT, GOTO, BUG, INIT_BUG};
-  State st;
- 
+  InnerModel* innerModel;
+  State st = State::INIT;
+  Target t;
+  QLine2D linea;
+  float distanciaAnterior;
+  void goToTarget(const TLaserData& lData);
+  void bug(const TLaserData& lData);
+  void initBug(const TLaserData& lData, const TBaseState& bState);
+  bool obstacle(TLaserData lData);
+  bool targetAtsight(TLaserData lData);
+  float obstacleLeft( const TLaserData& tlaser);
+  float distanceToLine(const TBaseState& bState); 
 };
 
 #endif

@@ -6,7 +6,39 @@
 
 #IncludeRegexTransform: 
 
-/home/salabeta/robocomp/components/parastroROB/CONTROLLER/src/CommonBehavior.cpp
+/home/juanlu/robocomp/classes/qlog/qlog.cpp
+qlog.h
+/home/juanlu/robocomp/classes/qlog/qlog.h
+
+/home/juanlu/robocomp/classes/qlog/qlog.h
+config.h
+/home/juanlu/robocomp/classes/qlog/config.h
+QtCore
+-
+iostream
+-
+boost/format.hpp
+-
+Logger.h
+-
+boost/format.hpp
+-
+
+/home/juanlu/robocomp/classes/rapplication/rapplication.cpp
+rapplication.h
+/home/juanlu/robocomp/classes/rapplication/rapplication.h
+
+/home/juanlu/robocomp/classes/rapplication/rapplication.h
+Ice/Ice.h
+-
+Ice/Application.h
+-
+IceUtil/IceUtil.h
+-
+QtCore
+-
+
+/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/CommonBehavior.cpp
 CommonBehavior.h
 -
 Ice/LocalException.h
@@ -20,21 +52,21 @@ Ice/Object.h
 IceUtil/Iterator.h
 -
 
-/home/salabeta/robocomp/components/parastroROB/CONTROLLER/src/Controller_automoc.cpp
+/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/Controller_automoc.cpp
 moc_commonbehaviorI.cpp
-/home/salabeta/robocomp/components/parastroROB/CONTROLLER/src/moc_commonbehaviorI.cpp
+/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/moc_commonbehaviorI.cpp
 moc_genericmonitor.cpp
-/home/salabeta/robocomp/components/parastroROB/CONTROLLER/src/moc_genericmonitor.cpp
+/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/moc_genericmonitor.cpp
 moc_genericworker.cpp
-/home/salabeta/robocomp/components/parastroROB/CONTROLLER/src/moc_genericworker.cpp
+/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/moc_genericworker.cpp
 moc_rcismousepickerI.cpp
-/home/salabeta/robocomp/components/parastroROB/CONTROLLER/src/moc_rcismousepickerI.cpp
+/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/moc_rcismousepickerI.cpp
 moc_specificmonitor.cpp
-/home/salabeta/robocomp/components/parastroROB/CONTROLLER/src/moc_specificmonitor.cpp
+/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/moc_specificmonitor.cpp
 moc_specificworker.cpp
-/home/salabeta/robocomp/components/parastroROB/CONTROLLER/src/moc_specificworker.cpp
+/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/moc_specificworker.cpp
 
-/home/salabeta/robocomp/components/parastroROB/CONTROLLER/src/DifferentialRobot.cpp
+/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/DifferentialRobot.cpp
 DifferentialRobot.h
 -
 Ice/LocalException.h
@@ -48,7 +80,7 @@ Ice/Object.h
 IceUtil/Iterator.h
 -
 
-/home/salabeta/robocomp/components/parastroROB/CONTROLLER/src/Laser.cpp
+/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/Laser.cpp
 Laser.h
 -
 Ice/LocalException.h
@@ -62,7 +94,7 @@ Ice/Object.h
 IceUtil/Iterator.h
 -
 
-/home/salabeta/robocomp/components/parastroROB/CONTROLLER/src/RCISMousePicker.cpp
+/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/RCISMousePicker.cpp
 RCISMousePicker.h
 -
 Ice/LocalException.h
@@ -76,11 +108,11 @@ Ice/Object.h
 IceUtil/Iterator.h
 -
 
-/home/salabeta/robocomp/components/parastroROB/CONTROLLER/src/commonbehaviorI.cpp
+/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/commonbehaviorI.cpp
 commonbehaviorI.h
-/home/salabeta/robocomp/components/parastroROB/CONTROLLER/src/commonbehaviorI.h
+/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/commonbehaviorI.h
 
-/home/salabeta/robocomp/components/parastroROB/CONTROLLER/src/commonbehaviorI.h
+/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/commonbehaviorI.h
 QtCore/QObject
 -
 Ice/Ice.h
@@ -90,37 +122,37 @@ CommonBehavior.h
 config.h
 -
 genericworker.h
-/home/salabeta/robocomp/components/parastroROB/CONTROLLER/src/genericworker.h
+/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/genericworker.h
 genericmonitor.h
-/home/salabeta/robocomp/components/parastroROB/CONTROLLER/src/genericmonitor.h
+/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/genericmonitor.h
 
-/home/salabeta/robocomp/components/parastroROB/CONTROLLER/src/config.h
+/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/config.h
 
-/home/salabeta/robocomp/components/parastroROB/CONTROLLER/src/genericmonitor.cpp
+/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/genericmonitor.cpp
 genericmonitor.h
-/home/salabeta/robocomp/components/parastroROB/CONTROLLER/src/genericmonitor.h
+/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/genericmonitor.h
 
-/home/salabeta/robocomp/components/parastroROB/CONTROLLER/src/genericmonitor.h
+/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/genericmonitor.h
 Ice/Ice.h
 -
 QtCore
 -
 genericworker.h
-/home/salabeta/robocomp/components/parastroROB/CONTROLLER/src/genericworker.h
+/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/genericworker.h
 config.h
-/home/salabeta/robocomp/components/parastroROB/CONTROLLER/src/config.h
+/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/config.h
 qlog/qlog.h
 -
 CommonBehavior.h
 -
 
-/home/salabeta/robocomp/components/parastroROB/CONTROLLER/src/genericworker.cpp
+/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/genericworker.cpp
 genericworker.h
-/home/salabeta/robocomp/components/parastroROB/CONTROLLER/src/genericworker.h
+/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/genericworker.h
 
-/home/salabeta/robocomp/components/parastroROB/CONTROLLER/src/genericworker.h
+/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/genericworker.h
 config.h
-/home/salabeta/robocomp/components/parastroROB/CONTROLLER/src/config.h
+/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/config.h
 QtGui
 -
 stdint.h
@@ -138,7 +170,7 @@ RCISMousePicker.h
 DifferentialRobot.h
 -
 
-/home/salabeta/robocomp/components/parastroROB/CONTROLLER/src/main.cpp
+/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/main.cpp
 signal.h
 -
 QtCore
@@ -156,17 +188,17 @@ rapplication/rapplication.h
 qlog/qlog.h
 -
 config.h
-/home/salabeta/robocomp/components/parastroROB/CONTROLLER/src/config.h
+/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/config.h
 genericmonitor.h
-/home/salabeta/robocomp/components/parastroROB/CONTROLLER/src/genericmonitor.h
+/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/genericmonitor.h
 genericworker.h
-/home/salabeta/robocomp/components/parastroROB/CONTROLLER/src/genericworker.h
+/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/genericworker.h
 specificworker.h
-/home/salabeta/robocomp/components/parastroROB/CONTROLLER/src/specificworker.h
+/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/specificworker.h
 specificmonitor.h
-/home/salabeta/robocomp/components/parastroROB/CONTROLLER/src/specificmonitor.h
+/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/specificmonitor.h
 commonbehaviorI.h
-/home/salabeta/robocomp/components/parastroROB/CONTROLLER/src/commonbehaviorI.h
+/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/commonbehaviorI.h
 rcismousepickerI.h
 -
 DifferentialRobot.h
@@ -176,35 +208,35 @@ Laser.h
 RCISMousePicker.h
 -
 
-/home/salabeta/robocomp/components/parastroROB/CONTROLLER/src/moc_commonbehaviorI.cpp
+/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/moc_commonbehaviorI.cpp
 commonbehaviorI.h
-/home/salabeta/robocomp/components/parastroROB/CONTROLLER/src/commonbehaviorI.h
+/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/commonbehaviorI.h
 
-/home/salabeta/robocomp/components/parastroROB/CONTROLLER/src/moc_genericmonitor.cpp
+/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/moc_genericmonitor.cpp
 genericmonitor.h
-/home/salabeta/robocomp/components/parastroROB/CONTROLLER/src/genericmonitor.h
+/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/genericmonitor.h
 
-/home/salabeta/robocomp/components/parastroROB/CONTROLLER/src/moc_genericworker.cpp
+/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/moc_genericworker.cpp
 genericworker.h
-/home/salabeta/robocomp/components/parastroROB/CONTROLLER/src/genericworker.h
+/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/genericworker.h
 
-/home/salabeta/robocomp/components/parastroROB/CONTROLLER/src/moc_rcismousepickerI.cpp
+/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/moc_rcismousepickerI.cpp
 rcismousepickerI.h
-/home/salabeta/robocomp/components/parastroROB/CONTROLLER/src/rcismousepickerI.h
+/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/rcismousepickerI.h
 
-/home/salabeta/robocomp/components/parastroROB/CONTROLLER/src/moc_specificmonitor.cpp
+/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/moc_specificmonitor.cpp
 specificmonitor.h
-/home/salabeta/robocomp/components/parastroROB/CONTROLLER/src/specificmonitor.h
+/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/specificmonitor.h
 
-/home/salabeta/robocomp/components/parastroROB/CONTROLLER/src/moc_specificworker.cpp
+/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/moc_specificworker.cpp
 specificworker.h
-/home/salabeta/robocomp/components/parastroROB/CONTROLLER/src/specificworker.h
+/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/specificworker.h
 
-/home/salabeta/robocomp/components/parastroROB/CONTROLLER/src/rcismousepickerI.cpp
+/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/rcismousepickerI.cpp
 rcismousepickerI.h
-/home/salabeta/robocomp/components/parastroROB/CONTROLLER/src/rcismousepickerI.h
+/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/rcismousepickerI.h
 
-/home/salabeta/robocomp/components/parastroROB/CONTROLLER/src/rcismousepickerI.h
+/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/rcismousepickerI.h
 QtCore/QObject
 -
 Ice/Ice.h
@@ -214,52 +246,24 @@ RCISMousePicker.h
 config.h
 -
 genericworker.h
-/home/salabeta/robocomp/components/parastroROB/CONTROLLER/src/genericworker.h
+/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/genericworker.h
 
-/home/salabeta/robocomp/components/parastroROB/CONTROLLER/src/specificmonitor.cpp
+/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/specificmonitor.cpp
 specificmonitor.h
-/home/salabeta/robocomp/components/parastroROB/CONTROLLER/src/specificmonitor.h
+/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/specificmonitor.h
 
-/home/salabeta/robocomp/components/parastroROB/CONTROLLER/src/specificmonitor.h
+/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/specificmonitor.h
 genericmonitor.h
-/home/salabeta/robocomp/components/parastroROB/CONTROLLER/src/genericmonitor.h
+/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/genericmonitor.h
 
-/home/salabeta/robocomp/components/parastroROB/CONTROLLER/src/specificworker.cpp
+/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/specificworker.cpp
 specificworker.h
-/home/salabeta/robocomp/components/parastroROB/CONTROLLER/src/specificworker.h
+/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/specificworker.h
 
-/home/salabeta/robocomp/components/parastroROB/CONTROLLER/src/specificworker.h
+/home/juanlu/robocomp/components/parastroROB/CONTROLLER/src/specificworker.h
 genericworker.h
 -
 innermodel/innermodel.h
--
-
-/opt/robocomp/classes/qlog/qlog.cpp
-qlog.h
-/opt/robocomp/classes/qlog/qlog.h
-
-/opt/robocomp/classes/qlog/qlog.h
-config.h
-/opt/robocomp/classes/qlog/config.h
-QtCore
--
-iostream
--
-Logger.h
--
-
-/opt/robocomp/classes/rapplication/rapplication.cpp
-rapplication.h
-/opt/robocomp/classes/rapplication/rapplication.h
-
-/opt/robocomp/classes/rapplication/rapplication.h
-Ice/Ice.h
--
-Ice/Application.h
--
-IceUtil/IceUtil.h
--
-QtCore
 -
 
 /opt/robocomp/include/innermodel/innermodel.h
@@ -4291,6 +4295,8 @@ IceUtil/Optional.h
 -
 Ice/StreamF.h
 -
+GenericBase.h
+-
 Ice/UndefSysMacros.h
 -
 
@@ -4325,7 +4331,7 @@ IceUtil/Optional.h
 -
 Ice/StreamF.h
 -
-DifferentialRobot.h
+GenericBase.h
 -
 Ice/UndefSysMacros.h
 -
