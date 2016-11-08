@@ -116,9 +116,20 @@ void SpecificWorker::bug(const TLaserData &lData, const TBaseState& bState)
 {
 //   float vr;
 //   float max_adv = 350.;
-  float const alfa = log( 0.1) / log( 0.2);
+  float const alfa = log( 0.1) / log( 0.3);
   float dist = obstacleLeft(lData);
   float diffToline = distanceToLine(bState);
+  
+//   QVec tr = innerModel->transform("base", t.getPose(), "world");
+//   float distancia = tr.norm2();
+// 
+//   if(distancia < 280)
+//   {
+//     st= State::INIT;
+//     t.setActive(false);
+//     differentialrobot_proxy->stopBase();
+//     return;
+//   }
   
   if ( targetAtsight(lData) )
   {
@@ -176,7 +187,7 @@ bool SpecificWorker::targetAtsight(const RoboCompLaser::TLaserData lData)
 	}
 	QVec targetInRobot = innerModel->transform("base", t.getPose(), "world");
 	float dist = targetInRobot.norm2();
-	int veces = int(dist / 80);  //number of times the robot semilength fits in the robot-to-target distance
+	int veces = int(dist / 150);  //number of times the robot semilength fits in the robot-to-target distance
 	float landa = 1./veces;
 	
 	QList<QPoint> points;
@@ -212,7 +223,7 @@ void SpecificWorker::goToTarget(const TLaserData& lData)
   float angle = atan2 ( tr.x(),tr.z() );
   float dist = tr.norm2();
 
-  if(dist < 100)
+  if(dist < 280)
   {
     st= State::INIT;
     t.setActive(false);
