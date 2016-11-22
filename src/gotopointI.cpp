@@ -16,44 +16,41 @@
  *    You should have received a copy of the GNU General Public License
  *    along with RoboComp.  If not, see <http://www.gnu.org/licenses/>.
  */
+#include "gotopointI.h"
 
-/**
-       \brief
-       @author authorname
-*/
-
-
-
-
-
-
-
-#ifndef SPECIFICWORKER_H
-#define SPECIFICWORKER_H
-
-#include <genericworker.h>
-#include <innermodel/innermodel.h>
-
-class SpecificWorker : public GenericWorker
+GotoPointI::GotoPointI(GenericWorker *_worker, QObject *parent) : QObject(parent)
 {
-Q_OBJECT
-public:
-	SpecificWorker(MapPrx& mprx);	
-	~SpecificWorker();
-	bool setParams(RoboCompCommonBehavior::ParameterList params);
+	worker = _worker;
+	mutex = worker->mutex;       // Shared worker mutex
+}
 
-	void go(const string &nodo, const float x, const float y, const float alpha);
-	void turn(const float speed);
-	bool atTarget();
-	void stop();
-	void setPick(const Pick &myPick);
 
-public slots:
-	void compute(); 	
+GotoPointI::~GotoPointI()
+{
+}
 
-private:
-	
-};
+void GotoPointI::go(const string  &nodo, const float  x, const float  y, const float  alpha, const Ice::Current&)
+{
+	worker->go(nodo, x, y, alpha);
+}
 
-#endif
+void GotoPointI::turn(const float  speed, const Ice::Current&)
+{
+	worker->turn(speed);
+}
+
+bool GotoPointI::atTarget(const Ice::Current&)
+{
+	return worker->atTarget();
+}
+
+void GotoPointI::stop(const Ice::Current&)
+{
+	worker->stop();
+}
+
+
+
+
+
 

@@ -85,7 +85,7 @@ src/preinstall:
 src/CMakeFiles/Controller.dir/all: src/CMakeFiles/Controller_automoc.dir/all
 	$(MAKE) -f src/CMakeFiles/Controller.dir/build.make src/CMakeFiles/Controller.dir/depend
 	$(MAKE) -f src/CMakeFiles/Controller.dir/build.make src/CMakeFiles/Controller.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/salabeta/robocomp/components/parastroROB/CONTROLLER/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 "Built target Controller"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/salabeta/robocomp/components/parastroROB/CONTROLLER/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23 "Built target Controller"
 .PHONY : src/CMakeFiles/Controller.dir/all
 
 # Include target in all.
@@ -95,7 +95,7 @@ all: src/CMakeFiles/Controller.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/Controller.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/salabeta/robocomp/components/parastroROB/CONTROLLER/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/salabeta/robocomp/components/parastroROB/CONTROLLER/CMakeFiles 24
 	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/Controller.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/salabeta/robocomp/components/parastroROB/CONTROLLER/CMakeFiles 0
 .PHONY : src/CMakeFiles/Controller.dir/rule
@@ -122,7 +122,7 @@ clean: src/CMakeFiles/Controller.dir/clean
 src/CMakeFiles/Controller_automoc.dir/all:
 	$(MAKE) -f src/CMakeFiles/Controller_automoc.dir/build.make src/CMakeFiles/Controller_automoc.dir/depend
 	$(MAKE) -f src/CMakeFiles/Controller_automoc.dir/build.make src/CMakeFiles/Controller_automoc.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/salabeta/robocomp/components/parastroROB/CONTROLLER/CMakeFiles --progress-num=21 "Built target Controller_automoc"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/salabeta/robocomp/components/parastroROB/CONTROLLER/CMakeFiles --progress-num=24 "Built target Controller_automoc"
 .PHONY : src/CMakeFiles/Controller_automoc.dir/all
 
 # Build rule for subdir invocation for target.

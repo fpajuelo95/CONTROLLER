@@ -41,6 +41,7 @@ bool SpecificWorker::setParams(RoboCompCommonBehavior::ParameterList params)
 
     innerModel=new InnerModel("/home/robocomp/robocomp/files/innermodel/simpleworld.xml");	
     timer.start(Period);
+    t.setActive(false);
     return true;
 }
 
@@ -224,7 +225,8 @@ void SpecificWorker::goToTarget(const TLaserData& lData)
   float dist = tr.norm2();
 
   if(dist < 280)
-  {
+  { 
+    qDebug()<< "AQUIIIIIIII";
     st= State::INIT;
     t.setActive(false);
     differentialrobot_proxy->stopBase();
@@ -274,6 +276,31 @@ float SpecificWorker::obstacleLeft(const TLaserData& tlaser)
   }
   return min;
 }
+
+
+void SpecificWorker::go(const string& nodo, const float x, const float y, const float alpha)
+{
+  t.copy(x,y);
+  t.setActive(true);
+  st= State::INIT;
+
+}
+
+void SpecificWorker::turn(const float speed)
+{
+    differentialrobot_proxy->setSpeedBase(0,speed);
+}
+
+bool SpecificWorker::atTarget()
+{
+  return !t.isActive();
+}
+
+void SpecificWorker::stop()
+{
+  differentialrobot_proxy->stopBase();
+}
+
   
 
 void SpecificWorker::setPick(const Pick &myPick)

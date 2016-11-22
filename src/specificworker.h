@@ -42,6 +42,10 @@ public:
 	~SpecificWorker();
 	bool setParams(RoboCompCommonBehavior::ParameterList params);
 	void setPick(const Pick &myPick);
+	void go(const string &nodo, const float x, const float y, const float alpha);
+	void turn(const float speed);
+	bool atTarget();
+	void stop();
 // 	bool girado=true;
 
 
@@ -54,7 +58,7 @@ private:
   {
     QMutex m;
     QVec pose;
-    bool active = false;
+    bool active;
     
     void setActive(bool bandera)
     {
@@ -74,6 +78,11 @@ private:
     {
       QMutexLocker lm(&m);
       return pose;
+    }
+    
+    bool isActive(){
+    
+      return active;
     }
   };
   

@@ -16,44 +16,40 @@
  *    You should have received a copy of the GNU General Public License
  *    along with RoboComp.  If not, see <http://www.gnu.org/licenses/>.
  */
+#ifndef GOTOPOINT_H
+#define GOTOPOINT_H
 
-/**
-       \brief
-       @author authorname
-*/
+// QT includes
+#include <QtCore/QObject>
 
+// Ice includes
+#include <Ice/Ice.h>
+#include <GotoPoint.h>
 
+#include <config.h>
+#include "genericworker.h"
 
+using namespace RoboCompGotoPoint;
 
-
-
-
-#ifndef SPECIFICWORKER_H
-#define SPECIFICWORKER_H
-
-#include <genericworker.h>
-#include <innermodel/innermodel.h>
-
-class SpecificWorker : public GenericWorker
+class GotoPointI : public QObject , public virtual RoboCompGotoPoint::GotoPoint
 {
 Q_OBJECT
 public:
-	SpecificWorker(MapPrx& mprx);	
-	~SpecificWorker();
-	bool setParams(RoboCompCommonBehavior::ParameterList params);
-
-	void go(const string &nodo, const float x, const float y, const float alpha);
-	void turn(const float speed);
-	bool atTarget();
-	void stop();
-	void setPick(const Pick &myPick);
-
-public slots:
-	void compute(); 	
-
-private:
+	GotoPointI( GenericWorker *_worker, QObject *parent = 0 );
+	~GotoPointI();
 	
+	void go(const string  &nodo, const float  x, const float  y, const float  alpha, const Ice::Current&);
+	void turn(const float  speed, const Ice::Current&);
+	bool atTarget(const Ice::Current&);
+	void stop(const Ice::Current&);
+
+	QMutex *mutex;
+private:
+
+	GenericWorker *worker;
+public slots:
+
+
 };
 
 #endif
-
